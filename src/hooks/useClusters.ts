@@ -1,6 +1,6 @@
 import { useMemo, useCallback } from 'react';
 import Supercluster from 'supercluster';
-import { Company } from '@/types';
+import { MapCompany } from '@/types';
 
 export interface ClusterPoint {
     type: 'cluster';
@@ -8,14 +8,14 @@ export interface ClusterPoint {
     lng: number;
     lat: number;
     pointCount: number;
-    totalEffectif: number;
-    dominantFiliere: string;
+    totalEmployees: number;
+    dominantGroup: string;
     expansionZoom: number;
 }
 
 export interface IndividualPoint {
     type: 'individual';
-    company: Company;
+    company: MapCompany;
     lng: number;
     lat: number;
 }
@@ -24,26 +24,24 @@ export type MapPoint = ClusterPoint | IndividualPoint;
 
 interface CompanyProperties {
     companyIndex: number;
-    filiere: string;
-    effectif: number;
+    naceGroup: string;
+    employees: number;
 }
 
-export function useClusters(data: Company[], zoomLevel: number) {
-    // Per-filière Supercluster instances — clusters only merge same-filière points
+export function useClusters(data: MapCompany[], zoomLevel: number) {
+    // Per-naceGroup Supercluster instances — clusters only merge same-group points
     const indices = useMemo(() => {
         const map = new Map<string, Supercluster<CompanyProperties>>();
 
-        // Group companies with coordinates by filière
-        const byFiliere = new Map<string, { company: Company; idx: number }[]>();
+        const byGroup = new Map<string, { company: MapCompany; idx: number }[]>();
         for (let i = 0; i < data.length; i++) {
             const c = data[i];
-            if (c.coordinates === null) continue;
-            const f = c.filiere;
-            if (!byFiliere.has(f)) byFiliere.set(f, []);
-            byFiliere.get(f)!.push({ company: c, idx: i });
+            const g = c.naceGroup;
+            if (!byGroup.has(g)) byGroup.set(g, []);
+            byGroup.get(g)!.push({ company: c, idx: i });
         }
 
-        for (const [, items] of byFiliere) {
+        for (const [, items] of byGroup) {
             const sc = new Supercluster<CompanyProperties>({
                 radius: 80,
                 maxZoom: 22,
@@ -53,17 +51,17 @@ export function useClusters(data: Company[], zoomLevel: number) {
                 type: 'Feature' as const,
                 geometry: {
                     type: 'Point' as const,
-                    coordinates: [company.coordinates![0], company.coordinates![1]],
+                    coordinates: [company.coordinates[0], company.coordinates[1]],
                 },
                 properties: {
                     companyIndex: idx,
-                    filiere: company.filiere,
-                    effectif: company.effectif_total || 0,
+                    naceGroup: company.naceGroup,
+                    employees: company.employees || 0,
                 },
             }));
 
             sc.load(features);
-            map.set(items[0].company.filiere, sc);
+            map.set(items[0].company.naceGroup, sc);
         }
 
         return map;
@@ -74,7 +72,7 @@ export function useClusters(data: Company[], zoomLevel: number) {
         const bbox: [number, number, number, number] = [-5.5, 41.0, 10.0, 51.5];
         const allPoints: MapPoint[] = [];
 
-        for (const [filiere, sc] of indices) {
+        for (const [group, sc] of indices) {
             const clusters = sc.getClusters(bbox, clampedZoom);
 
             for (const feature of clusters) {
@@ -85,9 +83,9 @@ export function useClusters(data: Company[], zoomLevel: number) {
                     const clusterId: number = props.cluster_id;
                     const leaves = sc.getLeaves(clusterId, Infinity);
 
-                    let totalEffectif = 0;
+                    let totalEmployees = 0;
                     for (const leaf of leaves) {
-                        totalEffectif += leaf.properties.effectif || 0;
+                        totalEmployees += leaf.properties.employees || 0;
                     }
 
                     const expansionZoom = sc.getClusterExpansionZoom(clusterId);
@@ -98,8 +96,8 @@ export function useClusters(data: Company[], zoomLevel: number) {
                         lng,
                         lat,
                         pointCount: props.point_count as number,
-                        totalEffectif,
-                        dominantFiliere: filiere,
+                        totalEmployees,
+                        dominantGroup: group,
                         expansionZoom,
                     });
                 } else {

@@ -1,8 +1,11 @@
 import { create } from 'zustand';
-import { TreeNode, CompanyEU } from '@/types';
+import { TreeNode, CompanyEU, MapCompany } from '@/types';
+import { loadGeocodeLookup, geocodeCity } from '@/lib/geocode';
+import { companyEUToMapCompany } from '@/lib/mapCompany';
 
 type SortKey = "company_name" | "country_iso" | "nace_core" | "employees" | "revenue_eur_th" | "ebitda_eur_th" | "city" | "region" | "guo_name";
 type SortDir = "asc" | "desc";
+type ViewMode = "table" | "map";
 
 interface Stats {
     total: number;
@@ -17,11 +20,19 @@ interface Stats {
 interface DefenseState {
     tree: TreeNode | null;
 
-    // Server-side paginated results
+    // View
+    viewMode: ViewMode;
+
+    // Server-side paginated results (table)
     results: CompanyEU[];
     total: number;
     stats: Stats;
     loading: boolean;
+
+    // Map data
+    mapCompanies: MapCompany[];
+    mapLoading: boolean;
+    selectedMapCompany: MapCompany | null;
 
     // Dropdown data
     countries: [string, number][];
@@ -49,8 +60,10 @@ interface DefenseState {
 
     // Actions
     setTree: (t: TreeNode) => void;
+    setViewMode: (m: ViewMode) => void;
     setSelectedNode: (n: TreeNode | null) => void;
     setSelectedCompany: (c: CompanyEU | null) => void;
+    setSelectedMapCompany: (c: MapCompany | null) => void;
     setSearchQuery: (q: string) => void;
     setCountryFilter: (c: string) => void;
     setRegionFilter: (r: string) => void;
@@ -67,9 +80,10 @@ interface DefenseState {
     fetchResults: () => Promise<void>;
     fetchStats: () => Promise<void>;
     fetchFilters: () => Promise<void>;
+    fetchMapResults: () => Promise<void>;
 }
 
-export type { SortKey, SortDir, Stats };
+export type { SortKey, SortDir, Stats, ViewMode };
 
 function collectNaceCodes(node: TreeNode): string[] {
     if (node.nace_codes) return node.nace_codes;
@@ -88,7 +102,6 @@ function apiFetch(path: string): Promise<Response> {
     return fetch(path, { headers });
 }
 
-/** Build query string for bar filters (shared between fetchResults and fetchStats) */
 function buildBarParams(state: DefenseState): URLSearchParams {
     const p = new URLSearchParams();
     if (state.countryFilter) p.set('country', state.countryFilter);
@@ -102,13 +115,51 @@ function buildBarParams(state: DefenseState): URLSearchParams {
     return p;
 }
 
+/** Fetch all pages for map display (pageSize=500, parallel batches) */
+async function fetchAllPages(baseParams: URLSearchParams): Promise<CompanyEU[]> {
+    baseParams.set('pageSize', '500');
+    baseParams.set('page', '0');
+    baseParams.set('sort', 'employees');
+    baseParams.set('dir', 'desc');
+
+    // First page to get total
+    const res = await apiFetch(`/api/companies?${baseParams}`);
+    const first = await res.json();
+    const all: CompanyEU[] = first.data;
+    const total: number = first.total;
+
+    if (total <= 500) return all;
+
+    // Cap at 5000 companies for map performance
+    const maxPages = Math.min(Math.ceil(total / 500), 10);
+    const remaining = Array.from({ length: maxPages - 1 }, (_, i) => i + 1);
+
+    const batches = await Promise.all(
+        remaining.map(async (page) => {
+            const p = new URLSearchParams(baseParams);
+            p.set('page', String(page));
+            const r = await apiFetch(`/api/companies?${p}`);
+            const json = await r.json();
+            return json.data as CompanyEU[];
+        })
+    );
+
+    for (const batch of batches) all.push(...batch);
+    return all;
+}
+
 export const useDefenseStore = create<DefenseState>((set, get) => ({
     tree: null,
+    viewMode: 'table',
 
     results: [],
     total: 0,
     stats: { total: 0, totalAll: 0, withUrl: 0, totalRevenue: 0, totalEmployees: 0, uniqueCountries: 0, byNace: {} },
     loading: false,
+
+    mapCompanies: [],
+    mapLoading: false,
+    selectedMapCompany: null,
 
     countries: [],
     regions: [],
@@ -131,8 +182,10 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
     page: 0,
 
     setTree: (tree) => set({ tree }),
+    setViewMode: (viewMode) => set({ viewMode }),
     setSelectedNode: (selectedNode) => set({ selectedNode, page: 0 }),
     setSelectedCompany: (selectedCompany) => set({ selectedCompany }),
+    setSelectedMapCompany: (selectedMapCompany) => set({ selectedMapCompany }),
     setSearchQuery: (searchQuery) => set({ searchQuery, page: 0 }),
     setCountryFilter: (countryFilter) => set({ countryFilter, page: 0 }),
     setRegionFilter: (regionFilter) => set({ regionFilter, page: 0 }),
@@ -164,7 +217,6 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
 
         const p = buildBarParams(state);
 
-        // Add NACE from selected node
         if (state.selectedNode) {
             const codes = collectNaceCodes(state.selectedNode);
             if (codes.length > 0) p.set('nace', codes.join(','));
@@ -204,6 +256,39 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
             set({ countries: json.countries, regions: json.regions });
         } catch {
             // silent
+        }
+    },
+
+    fetchMapResults: async () => {
+        const state = get();
+        set({ mapLoading: true });
+
+        const p = buildBarParams(state);
+        // Force country=FR for France map
+        p.set('country', 'FR');
+
+        if (state.selectedNode) {
+            const codes = collectNaceCodes(state.selectedNode);
+            if (codes.length > 0) p.set('nace', codes.join(','));
+        }
+
+        try {
+            const [companies, lookup] = await Promise.all([
+                fetchAllPages(p),
+                loadGeocodeLookup(),
+            ]);
+
+            const mapped: MapCompany[] = [];
+            for (const c of companies) {
+                const coords = geocodeCity(lookup, c.city);
+                if (coords) {
+                    mapped.push(companyEUToMapCompany(c, coords));
+                }
+            }
+
+            set({ mapCompanies: mapped, mapLoading: false });
+        } catch {
+            set({ mapLoading: false });
         }
     },
 }));
