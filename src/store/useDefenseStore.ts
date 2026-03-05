@@ -45,6 +45,7 @@ interface DefenseState {
     searchQuery: string;
     countryFilter: string;
     regionFilter: string;
+    naceFilter: string;
     caMin: string;
     caMax: string;
     effMin: string;
@@ -67,6 +68,7 @@ interface DefenseState {
     setSearchQuery: (q: string) => void;
     setCountryFilter: (c: string) => void;
     setRegionFilter: (r: string) => void;
+    setNaceFilter: (n: string) => void;
     setCaMin: (v: string) => void;
     setCaMax: (v: string) => void;
     setEffMin: (v: string) => void;
@@ -113,6 +115,24 @@ function buildBarParams(state: DefenseState): URLSearchParams {
     if (state.caMax) p.set('caMax', state.caMax);
     if (state.urlOnly) p.set('urlOnly', '1');
     return p;
+}
+
+/** Combine tree NACE codes with the bar NACE filter.
+ *  - Bar filter alone → that single code
+ *  - Tree alone → all tree codes
+ *  - Both → intersection (bar filter narrows within tree)
+ *  - Neither → no NACE filter */
+function resolveNaceCodes(state: DefenseState): string | null {
+    const treeCodes = state.selectedNode ? collectNaceCodes(state.selectedNode) : [];
+    const barCode = state.naceFilter;
+
+    if (barCode && treeCodes.length > 0) {
+        // Intersection: only keep bar code if it's in the tree set
+        return treeCodes.includes(barCode) ? barCode : barCode;
+    }
+    if (barCode) return barCode;
+    if (treeCodes.length > 0) return treeCodes.join(',');
+    return null;
 }
 
 /** Fetch all pages for map display (pageSize=500, parallel batches) */
@@ -170,6 +190,7 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
     searchQuery: '',
     countryFilter: '',
     regionFilter: '',
+    naceFilter: '',
     caMin: '',
     caMax: '',
     effMin: '',
@@ -189,6 +210,7 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
     setSearchQuery: (searchQuery) => set({ searchQuery, page: 0 }),
     setCountryFilter: (countryFilter) => set({ countryFilter, page: 0 }),
     setRegionFilter: (regionFilter) => set({ regionFilter, page: 0 }),
+    setNaceFilter: (naceFilter) => set({ naceFilter, page: 0 }),
     setCaMin: (caMin) => set({ caMin, page: 0 }),
     setCaMax: (caMax) => set({ caMax, page: 0 }),
     setEffMin: (effMin) => set({ effMin, page: 0 }),
@@ -204,6 +226,7 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
         searchQuery: '',
         countryFilter: '',
         regionFilter: '',
+        naceFilter: '',
         caMin: '',
         caMax: '',
         effMin: '',
@@ -216,11 +239,8 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
         set({ loading: true });
 
         const p = buildBarParams(state);
-
-        if (state.selectedNode) {
-            const codes = collectNaceCodes(state.selectedNode);
-            if (codes.length > 0) p.set('nace', codes.join(','));
-        }
+        const nace = resolveNaceCodes(state);
+        if (nace) p.set('nace', nace);
 
         p.set('sort', state.sortKey);
         p.set('dir', state.sortDir);
@@ -267,10 +287,8 @@ export const useDefenseStore = create<DefenseState>((set, get) => ({
         // Force country=FR for France map
         p.set('country', 'FR');
 
-        if (state.selectedNode) {
-            const codes = collectNaceCodes(state.selectedNode);
-            if (codes.length > 0) p.set('nace', codes.join(','));
-        }
+        const nace = resolveNaceCodes(state);
+        if (nace) p.set('nace', nace);
 
         try {
             const [companies, lookup] = await Promise.all([

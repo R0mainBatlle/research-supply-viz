@@ -17,7 +17,7 @@ export default function ProgrammesPage() {
         fetchResults, fetchStats, fetchFilters, fetchMapResults,
         mapCompanies, mapLoading,
         selectedMapCompany, setSelectedMapCompany,
-        selectedNode, searchQuery, countryFilter, regionFilter,
+        selectedNode, searchQuery, countryFilter, regionFilter, naceFilter,
         caMin, caMax, effMin, effMax, urlOnly,
         sortKey, sortDir, page,
     } = store;
@@ -80,7 +80,7 @@ export default function ProgrammesPage() {
         }, searchQuery ? 300 : 0);
         return () => clearTimeout(debounceRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [countryFilter, regionFilter, caMin, caMax, effMin, effMax, urlOnly, searchQuery]);
+    }, [countryFilter, regionFilter, naceFilter, caMin, caMax, effMin, effMax, urlOnly, searchQuery]);
 
     // Initial fetch after tree loaded
     useEffect(() => {

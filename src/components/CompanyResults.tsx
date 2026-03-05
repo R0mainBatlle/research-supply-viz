@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 import { Search, Download, ExternalLink, ArrowUpDown, ArrowUp, ArrowDown, X, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
-import { CompanyEU } from "@/types";
+import { CompanyEU, naceToGroup } from "@/types";
 import { useDefenseStore, SortKey } from "@/store/useDefenseStore";
 
 // ── Helpers ─────────────────────────────────────────────────────
@@ -42,6 +42,7 @@ export function CompanyResults() {
     searchQuery, setSearchQuery,
     countryFilter, setCountryFilter,
     regionFilter, setRegionFilter,
+    naceFilter, setNaceFilter,
     caMin, setCaMin, caMax, setCaMax,
     effMin, setEffMin, effMax, setEffMax,
     urlOnly, setUrlOnly,
@@ -49,6 +50,17 @@ export function CompanyResults() {
     page, setPage,
     resetFilters,
   } = store;
+
+  // Build NACE options sorted by count desc, with group label
+  const naceOptions = useMemo(() => {
+    const entries = Object.entries(stats.byNace)
+      .map(([code, count]) => ({ code, count, group: naceToGroup(code) }))
+      .sort((a, b) => b.count - a.count);
+    return entries.map(({ code, count, group }) => ({
+      value: code,
+      label: `${code} — ${group} (${count.toLocaleString("fr-FR")})`,
+    }));
+  }, [stats.byNace]);
 
   const tableRef = useRef<HTMLDivElement>(null);
 
@@ -120,6 +132,14 @@ export function CompanyResults() {
             onChange={setRegionFilter}
             options={regionList.map(r => ({ value: r, label: r }))}
             placeholder="Toutes"
+          />
+        </FilterGroup>
+        <FilterGroup label="NACE">
+          <FilterSelect
+            value={naceFilter}
+            onChange={setNaceFilter}
+            options={naceOptions}
+            placeholder="Tous"
           />
         </FilterGroup>
         <FilterGroup label="CA (k€)">
