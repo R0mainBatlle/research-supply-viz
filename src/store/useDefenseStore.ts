@@ -80,14 +80,12 @@ function collectNaceCodes(node: TreeNode): string[] {
     return Array.from(codes);
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 const API_TOKEN = process.env.NEXT_PUBLIC_API_TOKEN || '';
 
 function apiFetch(path: string): Promise<Response> {
-    const url = `${API_BASE}${path}`;
     const headers: Record<string, string> = {};
     if (API_TOKEN) headers['Authorization'] = `Bearer ${API_TOKEN}`;
-    return fetch(url, { headers });
+    return fetch(path, { headers });
 }
 
 /** Build query string for bar filters (shared between fetchResults and fetchStats) */
