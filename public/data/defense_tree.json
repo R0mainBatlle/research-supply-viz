@@ -1,0 +1,2010 @@
+{
+  "id": "root",
+  "name": "Guerre de haute intensité",
+  "children": [
+    {
+      "id": "munitions",
+      "name": "Munitions",
+      "level": "programme",
+      "criticality": "critique",
+      "context": "Consommation 155mm en conflit haute intensité: 10-20k obus/jour (Ukraine: pic 7-9k/jour côté UA). France produit ~100k obus/an (Nexter Bourges). Objectif BITD: 150k/an d'ici 2026. Petit calibre: stock national estimé à quelques jours de combat intensif. Chargement explosif: 1-2 sites ATEX en France, dernier producteur européen de TNT en Pologne. Poudres propulsives: quasi-monopole Eurenco, dépendance coton linters chinois >70%.",
+      "children": [
+        {
+          "id": "mun_155mm",
+          "name": "Artillerie 155mm",
+          "level": "categorie",
+          "context": "Seul site forge corps creux 155mm: Forges de Tarbes (Eurométal). Usinage: Nexter Bourges. Explosif: chargement TNT/RDX à La Chapelle-Saint-Ursin. Fusées: Junghans/Thales. Objectif OTAN: chaque allié doit pouvoir tirer 10 jours de combat intensif. La France est à environ 2-3 jours de stock.",
+          "children": [
+            {
+              "id": "CAP-01",
+              "name": "Forge lourde acier (>150mm)",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Forgeage à chaud de pièces massives en acier, matricage, estampage sur presses hydrauliques >2000 tonnes. Inclut forge libre, forge par matriçage, et refoulement.",
+              "civil_examples": "Pétrole et gaz (raccords haute pression), mines (pièces d'usure), automobile (vilebrequins, bielles), naval (arbres d'hélice), énergie (turbines)",
+              "bottleneck": "3-4 forges lourdes en France (Forges de Tarbes, LISI Aerospace, Aubert & Duval, Manoir Industries). Forges de Tarbes = seul site qualifié pour corps creux 155mm. Acier qualité balistique non stocké, approvisionnement 6-12 mois. Presses >3000t très rares.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2550",
+                "2591",
+                "2573",
+                "2841"
+              ]
+            },
+            {
+              "id": "CAP-03",
+              "name": "Usinage CNC précision multi-axes",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Tournage et fraisage 5 axes sur centres d'usinage CN. Tolérances <0.01mm. Usinage de corps d'obus, ogives, bases de fusées, composants mécaniques de précision.",
+              "civil_examples": "Aéronautique (pièces moteur, train d'atterrissage), automobile (prototypage), médical (prothèses), énergie (turbines)",
+              "bottleneck": "Capacité nationale saturée par aéronautique civile (Airbus, Safran). Opérateurs qualifiés: 2-3 ans de formation. Machines 5 axes: délai livraison 12-18 mois (DMG Mori, Mazak). Huiles de coupe et outils coupants importés.",
+              "programmes": [
+                "munitions",
+                "missiles",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2562",
+                "2561",
+                "2573",
+                "2849"
+              ]
+            },
+            {
+              "id": "CAP-05",
+              "name": "Chargement/remplissage explosifs",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Coulage, pressage isostatique ou pressage uniaxial de charges explosives (TNT, RDX, composition B, PBXN) dans des enveloppes métalliques. Opérations en environnement ATEX sévère.",
+              "civil_examples": "Démolition (charges de découpe), travaux publics (explosifs civils), mines (amorçage), spatial (séparation étages)",
+              "bottleneck": "1-2 sites qualifiés en France (Nexter La Chapelle-Saint-Ursin, Eurenco). Dernier producteur européen de TNT: Nitroerg (Pologne). RDX: dépendance importation. Normes ATEX/Seveso: 3-5 ans pour qualifier un nouveau site.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2051",
+                "2059"
+              ]
+            },
+            {
+              "id": "CAP-04",
+              "name": "Synthèse poudres propulsives",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Chimie de la nitrocellulose, formulation et extrusion de grains de poudre (simple base, double base, triple base). Contrôle balistique intérieur.",
+              "civil_examples": "Chasse et tir sportif (cartouches), spatial (propulsion), travaux publics (détonateurs), automobile (airbags)",
+              "bottleneck": "Quasi-monopole Eurenco (Bergerac, Sorgues) en France et Europe. Zéro capacité de surge. Coton linters (matière première nitrocellulose): dépendance Chine >70%. Délai re-démarrage ligne: 12-18 mois.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2051",
+                "2059"
+              ]
+            },
+            {
+              "id": "CAP-34",
+              "name": "Détonateurs et allumeurs pyrotechniques",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Fabrication de micro-détonateurs, relais pyrotechniques, compositions primaires (azoture de plomb, styphnate). Assemblage fusées de munitions.",
+              "civil_examples": "Automobile (airbags, prétensionneurs), mines (détonateurs civils), spatial (séparations pyrotechniques), démolition",
+              "bottleneck": "Manipulation extrêmement dangereuse. 1-2 fournisseurs mondiaux d'azoture de plomb. Junghans T2M (Alsace) et Nexter Munitions principaux intégrateurs français. Qualification d'un nouveau site: 5+ ans.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2540",
+                "2051"
+              ]
+            },
+            {
+              "id": "CAP-43",
+              "name": "Dispositifs piézoélectriques",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de céramiques PZT (titano-zirconate de plomb) pour fusées de proximité, capteurs de choc, accéléromètres piézoélectriques.",
+              "civil_examples": "Médical (échographie), automobile (capteurs de cognement), industrie (contrôle non destructif), instrumentation scientifique",
+              "bottleneck": "Fabricants européens existants (PI Ceramic, Meggitt). Directive RoHS restreint le plomb mais exemption défense. Matières premières accessibles.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2344",
+                "2399",
+                "2611"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mun_petit_calibre",
+          "name": "Petit calibre 5.56/7.62/12.7mm",
+          "level": "categorie",
+          "context": "Consommation combat haute intensité: plusieurs millions de cartouches/jour à l'échelle d'un corps d'armée. France n'a plus de capacité souveraine de production de munitions petit calibre depuis la fermeture de GIAT Tulle. Importation depuis partenaires OTAN (Nammo, BAE, Vista Outdoor). Projet de relocalisation en cours.",
+          "children": [
+            {
+              "id": "CAP-02",
+              "name": "Emboutissage/extrusion laiton-cuivre",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Deep drawing (emboutissage profond) de douilles en laiton, extrusion de tubes cuivre, formage projectiles. Cadences >1000 pièces/minute sur presses transfert.",
+              "civil_examples": "Plomberie (raccords), électricité (connecteurs cuivre), horlogerie (boîtiers), automobile (bagues, douilles)",
+              "bottleneck": "Cuivre et zinc 100% importés. Savoir-faire fabrication étuis quasi disparu en France. Presses transfert spécialisées: Waterbury Farrel (USA), Hilgeland (DE). Laiton qualité munitions: spécification stricte.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2550",
+                "2594",
+                "2599"
+              ]
+            },
+            {
+              "id": "CAP-41",
+              "name": "Assemblage automatisé haute cadence",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Lignes de production automatisées avec robots, systèmes de vision, convoyeurs, contrôle qualité en ligne. Cadences >100 unités/minute pour munitions petit calibre.",
+              "civil_examples": "Automobile (lignes d'assemblage), agroalimentaire (conditionnement), pharmaceutique (remplissage), électronique (assemblage)",
+              "bottleneck": "LE goulet d'étranglement n°1: la BITD française produit en mode quasi-artisanal (dizaines/centaines par jour) vs dizaines de milliers nécessaires. Intégrateurs lignes: Bosch Rexroth, Siemens, Festo. Temps de mise en place ligne: 12-24 mois.",
+              "programmes": [
+                "munitions",
+                "drones"
+              ],
+              "nace_codes": [
+                "2829",
+                "2899"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mun_roquettes_mortiers",
+          "name": "Roquettes et mortiers",
+          "level": "categorie",
+          "context": "Mortiers 120mm et roquettes 68mm/70mm: consommation élevée en combat interarmes. TDA Armements (Thales) principal producteur français. Tubes roquettes: extrusion alu/acier. Propulsion: moteurs à propergol solide.",
+          "children": [
+            {
+              "id": "CAP-40",
+              "name": "Extrusion/étirage tubes métalliques",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Extrusion à chaud et étirage à froid de tubes en acier et aluminium haute précision. Tubes sans soudure pour applications balistiques (tubes canons, corps roquettes, tubes lance-missiles).",
+              "civil_examples": "Pétrole (tubing/casing), automobile (arbres de transmission), construction (tubes structure), hydraulique (vérins)",
+              "bottleneck": "Nexter (Bourges) pour tubes canons: capacité unique en France. Vallourec pour tubes pétrole (reconvertible). Acier qualité canon: approvisionnement 6+ mois. Bancs d'épreuve: rares.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2420",
+                "2444",
+                "2550"
+              ]
+            },
+            {
+              "id": "CAP-22",
+              "name": "Fabrication propergols solides",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Formulation et coulée de propergols composites: perchlorate d'ammonium + HTPB (liant) + aluminium en poudre. Contrôle rhéologique et polymérisation en étuve.",
+              "civil_examples": "Spatial (boosters Ariane), feux d'artifice (propulsion), automobile (générateurs de gaz airbags), signalisation maritime",
+              "bottleneck": "ArianeGroup (Saint-Médard-en-Jalles) et Eurenco seuls en Europe. Perchlorate d'ammonium: 2 producteurs occidentaux. Aluminium haute pureté importé. Sites Seveso seuil haut.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2051",
+                "2059"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mun_mines",
+          "name": "Mines",
+          "level": "categorie",
+          "context": "Convention d'Ottawa interdit mines antipersonnel mais mines antichar restent légales et pertinentes pour le barrage défensif. Production quasi arrêtée en France. Mines à effet dirigé et mines intelligentes (avec capteurs) pour remplacer les champs de mines classiques.",
+          "children": [
+            {
+              "id": "CAP-29",
+              "name": "Injection plastique technique",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Moulage par injection de polymères techniques (PA6, PEEK, POM) pour boîtiers, corps de mines, composants structurels non métalliques.",
+              "civil_examples": "Automobile (pièces sous capot), électroménager, médical (dispositifs), électronique (boîtiers)",
+              "bottleneck": "Capacité abondante en France (>2000 moulistes). Polymères techniques importés mais disponibles. Moules: 8-16 semaines. Pas de goulet majeur.",
+              "programmes": [
+                "munitions",
+                "drones",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2229",
+                "2222"
+              ]
+            },
+            {
+              "id": "CAP-48",
+              "name": "Capteurs pression/force mécaniques",
+              "level": "capacite",
+              "criticality": "faible",
+              "description": "Fabrication de plaques de pression, capteurs de force piézorésistifs, dispositifs de déclenchement mécanique pour mines et systèmes d'amorçage.",
+              "civil_examples": "Automobile (capteurs pression pneus), industrie (pesage), médical (plateformes de force), domotique",
+              "bottleneck": "Technologie mature et largement disponible. Pas de goulet d'étranglement critique. Fabricants européens multiples.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2651",
+                "2612"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mun_speciales",
+          "name": "Munitions spéciales et grenades",
+          "level": "categorie",
+          "context": "Traceurs, fumigènes, éclairants, grenades: munitions de soutien indispensables au combat mais dont la production française a quasi disparu. Consommation massive en combat urbain et en haute intensité (occultation, désignation, combat rapproché).",
+          "children": [
+            {
+              "id": "CAP-69",
+              "name": "Traceurs et compositions pyrotechniques spéciales",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de compositions traçantes (strontium, baryum, magnésium), fumigènes (hexachloroéthane, phosphore rouge), éclairants (magnésium/sodium). Chargement dans projectiles et pots.",
+              "civil_examples": "Signalisation maritime (fusées de détresse), spectacle (feux d'artifice), agriculture (effarouchement), sécurité (fumigènes évacuation)",
+              "bottleneck": "Lacroix Défense (Muret) principal fabricant français. Compositions chimiques spécialisées: peu de fournisseurs. Phosphore rouge: réglementation stricte. Munitions traçantes indispensables au réglage de tir, compositions fumigènes pour occultation.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2051",
+                "2540"
+              ]
+            },
+            {
+              "id": "CAP-70",
+              "name": "Grenades à main et défensives",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Production de corps de grenades (fragmentation, offensives, fumigènes, assourdissantes), chargement, assemblage mécanismes de mise à feu à retard. Cuillère, goupille, détonateur.",
+              "civil_examples": "Maintien de l'ordre (grenades lacrymogènes, flashbang), déminage (charges de brèche), entraînement militaire",
+              "bottleneck": "Production française quasi disparue. Alsetex/Lacroix pour le maintien de l'ordre. Grenades militaires: importation (Diehl, Rheinmetall). Chaque fantassin consomme plusieurs grenades/jour en combat urbain HI. Volume: centaines de milliers/an nécessaires.",
+              "programmes": [
+                "munitions",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2540"
+              ]
+            },
+            {
+              "id": "CAP-71",
+              "name": "Ceintures de forçage et ogives",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication et sertissage de ceintures de forçage en cuivre ou plastique obturant sur corps d'obus. Formage d'ogives balistiques par repoussage/emboutissage.",
+              "civil_examples": "Emboutissage cuivre (connectique), formage de précision (industrie), plomberie (raccords cuivre)",
+              "bottleneck": "Ceinture de forçage: pièce d'usure critique pour chaque obus 155mm. Cuivre haute pureté nécessaire. Savoir-faire très spécifique (sertissage concentrique). Nexter Munitions principal utilisateur. Production actuelle calibrée pour 100k obus/an.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2550",
+                "2591"
+              ]
+            },
+            {
+              "id": "CAP-72",
+              "name": "Douilles d'artillerie (155mm)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Emboutissage profond de douilles en laiton ou acier pour cartouches d'artillerie 155mm. Traitement thermique, vérification dimensionnelle, épreuve pression. Pièces beaucoup plus grandes que petit calibre.",
+              "civil_examples": "Emboutissage profond grandes pièces (industrie), réservoirs sous pression, bouteilles de gaz",
+              "bottleneck": "Distinct de CAP-02 (petit calibre): les douilles 155mm sont des pièces de 10-15 kg nécessitant des presses >1000t. Procédé différent du petit calibre. Très peu de fabricants en Europe. Chaque obus 155mm nécessite une douille.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2550",
+                "2591",
+                "2573"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drones",
+      "name": "Drones",
+      "level": "programme",
+      "criticality": "critique",
+      "context": "Ukraine a démontré l'usage massif de drones FPV (>10 000/mois consommés). France n'a pas de capacité de production FPV en série. Drones ISR tactiques: Safran Patroller, Parrot ANAFI USA. Munitions rôdeuses: aucune production française en série. L'enjeu est la production de masse à bas coût, pas la haute technologie unitaire.",
+      "children": [
+        {
+          "id": "drone_fpv",
+          "name": "Drone FPV",
+          "level": "categorie",
+          "context": "Drone consommable à 500-2000€. Ukraine en consomme 50-100k/mois. Composants quasi exclusivement chinois (DJI, T-Motor, Foxeer). Assemblage artisanal. Enjeu: construire une filière européenne de production en masse avec composants souverains.",
+          "children": [
+            {
+              "id": "CAP-07",
+              "name": "Moteurs électriques brushless (BLDC)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Bobinage de stators, assemblage de rotors à aimants permanents NdFeB, équilibrage dynamique. Moteurs outrunner/inrunner pour propulsion drone.",
+              "civil_examples": "Automobile (moteurs traction EV), électroménager (pompes, ventilateurs), outillage (perceuses), modélisme, vélos électriques",
+              "bottleneck": "Aimants permanents NdFeB: dépendance Chine >90%. Quelques bobiniers en France (Mavilor, Precilec) mais pas à échelle drone. T-Motor/Sunnysky (Chine) dominent le marché drone. Relocalisation bobinage: faisable mais coûteux.",
+              "programmes": [
+                "drones",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2711",
+                "2712",
+                "2790"
+              ]
+            },
+            {
+              "id": "CAP-08",
+              "name": "Assemblage cartes électroniques (CMS/PCB)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Placement automatique de composants montés en surface (pick & place), soudure par refusion, inspection optique automatisée (AOI), test fonctionnel. Contrôleurs de vol, ESC, récepteurs vidéo.",
+              "civil_examples": "Télécoms (box internet), automobile (calculateurs), médical (dispositifs), IoT (capteurs connectés), domotique",
+              "bottleneck": "Composants critiques (MCU STM32, MOSFET) importés USA/Taïwan/Chine. EMS français existent (Lacroix, Eolane, Tronico) mais capacité limitée vs volumes drones. Composants passifs: dépendance Asie.",
+              "programmes": [
+                "drones",
+                "missiles",
+                "equipement_soldat",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2611",
+                "2612"
+              ]
+            },
+            {
+              "id": "CAP-12",
+              "name": "Cellules et packs batteries lithium",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Assemblage de cellules LiPo/Li-ion en packs avec BMS (Battery Management System), soudure par points, encapsulation, test de cyclage.",
+              "civil_examples": "Automobile (batteries EV), outillage portatif, vélos/trottinettes électriques, stockage énergie résidentiel, médical",
+              "bottleneck": "Cellules: dépendance totale Asie (CATL, Samsung SDI, LG). Gigafactories EU en construction (ACC Douvrin, Northvolt). BMS: conception FR possible mais composants importés. LiPo haute décharge pour drones: quasi exclusivement chinois.",
+              "programmes": [
+                "drones",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2720"
+              ]
+            },
+            {
+              "id": "CAP-06",
+              "name": "Mise en œuvre composites (carbone/verre/aramide)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Drapage manuel et automatisé, infusion sous vide, cuisson autoclave, enroulement filamentaire. Fabrication châssis et cellules drone en carbone ou fibre de verre.",
+              "civil_examples": "Aéronautique (fuselages, voilures), automobile (pièces carrosserie), nautisme (coques), éolien (pales), sport (vélos, skis)",
+              "bottleneck": "Fibre de carbone: dépendance Japon (Toray, Teijin) >60%. Résines époxy: BASF, Huntsman, Hexcel. Préimpregnés aéro: Hexcel (FR à Dagneux). Capacité composite France bonne mais orientée haute performance, pas grande série low-cost.",
+              "programmes": [
+                "drones",
+                "vehicules_blindes",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2229",
+                "2219",
+                "2016"
+              ]
+            },
+            {
+              "id": "CAP-74",
+              "name": "ESC (variateurs de vitesse brushless)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de variateurs de vitesse (Electronic Speed Controllers) pour moteurs brushless: MOSFET de puissance, firmware temps réel (BLHeli/AM32), protocoles DShot/PWM.",
+              "civil_examples": "Modélisme (voitures RC, avions RC), vélos électriques, trottinettes, outillage portatif (perceuses sans fil), ventilation industrielle",
+              "bottleneck": "Dépendance quasi totale sur fabricants chinois (T-Motor, HobbyWing, BLHeli). Chaque moteur drone a son ESC: 4 par drone FPV. 50 000 drones/mois = 200 000 ESC/mois. MOSFET: Infineon (DE), STMicro (FR) peuvent fournir, mais ESC assemblé = Chine.",
+              "programmes": [
+                "drones"
+              ],
+              "nace_codes": [
+                "2611",
+                "2612",
+                "2712"
+              ]
+            },
+            {
+              "id": "CAP-75",
+              "name": "Hélices et rotors haute performance",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Moulage par injection ou usinage d'hélices en composites (fibre de carbone/nylon) ou plastique renforcé pour drones multirotors et voilures fixes. Équilibrage dynamique.",
+              "civil_examples": "Modélisme, ventilation industrielle, marine (hélices bateau), aéronautique légère (ULM), éolien petit format",
+              "bottleneck": "Chaque drone FPV consomme 4 hélices (jetables après crash). 50 000 drones/mois = 200 000 hélices/mois. Production actuelle: T-Motor, HQProp, Gemfan (100% Chine). Zéro production européenne à l'échelle. Moule injection: 8-12 semaines. Faisable en France si volumes justifiés.",
+              "programmes": [
+                "drones"
+              ],
+              "nace_codes": [
+                "2229",
+                "2219",
+                "3030"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "drone_isr",
+          "name": "Drone ISR tactique",
+          "level": "categorie",
+          "context": "Drones de surveillance et reconnaissance au niveau compagnie/bataillon. Endurance 2-6h, portée 50-150km. Safran (Patroller), Delair, Parrot (ANAFI). Caméras EO/IR essentielles. Liaison de données sécurisée nécessaire. Volume: centaines d'unités en conflit HI.",
+          "children": [
+            {
+              "id": "CAP-10",
+              "name": "Capteurs imagerie infrarouge (bolomètres)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de micro-bolomètres MEMS non refroidis sur substrat silicium. Détecteurs matriciels 640x480 ou 1024x768 pixels. Package sous vide.",
+              "civil_examples": "Bâtiment (thermographie), automobile (vision nocturne), sécurité (vidéosurveillance), médical (dépistage fièvre), industrie (maintenance prédictive)",
+              "bottleneck": "Lynred (ex-Sofradir/ULIS) seul fabricant européen majeur de bolomètres. 1 site à Grenoble. Germanium pour optiques IR: rare, dépendance Chine 60%. FLIR/L3Harris (USA) concurrents. Wafers Si: fonderies TSMC/GlobalFoundries.",
+              "programmes": [
+                "drones",
+                "vehicules_blindes",
+                "missiles",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2670",
+                "2651"
+              ]
+            },
+            {
+              "id": "CAP-24",
+              "name": "Liaisons de données / modems tactiques",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Conception et fabrication de modems radio numériques, formes d'onde propriétaires/chiffrées, antennes directionnelles pour liaisons drone-sol. Résistance au brouillage (ECCM).",
+              "civil_examples": "Télécoms (modems 4G/5G), IoT industriel (LPWAN), maritime (AIS, VSAT), broadcast (faisceaux hertziens)",
+              "bottleneck": "Production actuelle en centaines/an vs milliers nécessaires. Thales/Elbit principaux fournisseurs. Composants RF critiques importés. Formes d'onde OTAN: interopérabilité requise. Chiffrement souverain obligatoire.",
+              "programmes": [
+                "drones",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2630",
+                "2610"
+              ]
+            },
+            {
+              "id": "CAP-23",
+              "name": "Centrales inertielles (IMU/INS)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de gyroscopes (MEMS, FOG, RLG) et accéléromètres. Assemblage en centrales inertielles avec algorithmes de navigation. Hybridation GPS/INS.",
+              "civil_examples": "Automobile (ESP, airbags), aéronautique civile (pilote automatique), maritime (navigation), robotique, smartphones (MEMS)",
+              "bottleneck": "Safran (Massy) et Exail (ex-iXBlue, Besançon) leaders français. Capacité limitée, orientée programmes unitaires. MEMS inertiels: Analog Devices, STMicro. FOG haute performance: très peu de fabricants mondiaux.",
+              "programmes": [
+                "drones",
+                "missiles",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2651",
+                "2612"
+              ]
+            },
+            {
+              "id": "CAP-15",
+              "name": "Optiques de précision",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Polissage de lentilles, traitements antireflets multicouches, assemblage de systèmes optiques (objectifs, zooms). Optiques en germanium, silicium, ZnSe pour IR.",
+              "civil_examples": "Photo/cinéma (objectifs), médical (endoscopes), astronomie (télescopes), métrologie (interféromètres), semi-conducteurs (lithographie)",
+              "bottleneck": "Germanium monocristallin: dépendance Chine 60%. Traitements AR IR: Safran, Thales (sites spécialisés). Polissage asphérique: très peu de sous-traitants qualifiés. Délai qualification optique militaire: 12+ mois.",
+              "programmes": [
+                "drones",
+                "vehicules_blindes",
+                "missiles",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2670",
+                "2651"
+              ]
+            },
+            {
+              "id": "CAP-73",
+              "name": "Contrôleurs de vol et logiciel embarqué",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de cartes contrôleur de vol (FC) avec IMU intégrée, pilote automatique, navigation waypoint. Firmware de stabilisation, modes de vol autonomes. Hardware + software intégré.",
+              "civil_examples": "Agriculture de précision (drones épandage), inspection infrastructure (ponts, lignes), cartographie aérienne, livraison par drone, cinéma aérien",
+              "bottleneck": "Dépendance actuelle: Pixhawk (open source, fabrication Chine), DJI (Chine), ArduPilot. Aucun contrôleur de vol souverain européen en production série. Parrot (FR) a du savoir-faire mais volumes limités. IMU MEMS intégrée: dépendance Bosch/InvenSense (USA).",
+              "programmes": [
+                "drones"
+              ],
+              "nace_codes": [
+                "2620",
+                "2611",
+                "6201"
+              ]
+            },
+            {
+              "id": "CAP-77",
+              "name": "Systèmes de récupération (parachutes, filets)",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de parachutes de récupération pour drones ISR réutilisables, systèmes d'atterrissage en filet, airbags de protection. Tissus ripstop, systèmes de déploiement pyrotechnique.",
+              "civil_examples": "Parachutisme sportif, spatial (récupération capsules), parapente, aéromodélisme, livraison aérienne humanitaire",
+              "bottleneck": "Drones ISR à plusieurs millions d'euros doivent être récupérés. Parachutes techniques: tissu ripstop léger, systèmes de déploiement fiable. Zodiac Aerospace (Safran), Para-Phernalia. Quelques PME spécialisées mais pas d'échelle.",
+              "programmes": [
+                "drones"
+              ],
+              "nace_codes": [
+                "1392",
+                "1399",
+                "2229"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "drone_munition_rodeuse",
+          "name": "Munition rôdeuse",
+          "level": "categorie",
+          "context": "Drone kamikaze avec capacité de patrouille (loitering) et engagement autonome. Pas de production française en série. IAI Harop (Israël), Switchblade (USA), Lancet (Russie). MBDA développe des concepts. Besoin: milliers d'unités stockables et déployables rapidement.",
+          "children": [
+            {
+              "id": "CAP-25",
+              "name": "Micro-turbines et petits turboréacteurs",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de turbines compactes (poussée 5-50 daN) pour propulsion de drones et missiles. Usinage roues, chambres de combustion, tuyères.",
+              "civil_examples": "Modélisme (jets RC), APU aviation, groupes électrogènes compacts, cogénération micro-turbines, UAV civils",
+              "bottleneck": "Très peu de fabricants européens (PBS Velká Bíteš, AMT). Roulements haute température importés (Japon). Superalliages (Inconel): approvisionnement tendu. Safran Helicopter Engines potentiel mais volumes très différents.",
+              "programmes": [
+                "drones",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2811",
+                "2812",
+                "3030"
+              ]
+            },
+            {
+              "id": "CAP-32",
+              "name": "Intégration autodirecteurs",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Assemblage de têtes chercheuses: détecteurs IR (InSb/MCT refroidis) + gimbal stabilisé + électronique de poursuite + algorithmes de tracking. Test en chambre climatique et simulateurs.",
+              "civil_examples": "Surveillance civile (caméras stabilisées), astronomie (optique adaptative), médical (imagerie), cinéma (stabilisation)",
+              "bottleneck": "MBDA, Safran Electronics & Defense, Thales LAS exclusivement. Scalabilité quasi nulle: production artisanale, dizaines/an vs milliers nécessaires. Détecteurs refroidis: Lynred/Sofradir. Cryogénie miniature: très niche.",
+              "programmes": [
+                "drones",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2651",
+                "2670",
+                "2630"
+              ]
+            },
+            {
+              "id": "CAP-46",
+              "name": "Edge computing / IA embarquée",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Intégration de GPU/NPU embarqués (NVIDIA Jetson, Qualcomm) pour traitement d'image, détection de cibles, navigation autonome en temps réel sur plateforme drone.",
+              "civil_examples": "Automobile (conduite autonome), robotique industrielle, vidéosurveillance intelligente, agriculture de précision, inspection infrastructure",
+              "bottleneck": "Dépendance NVIDIA (USA) et Qualcomm (USA) pour les puces. Pas de fabricant de NPU européen compétitif. Conception algorithmique FR bonne (CEA, INRIA). ITAR/EAR potentiel sur GPU haut de gamme.",
+              "programmes": [
+                "drones",
+                "missiles",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2620",
+                "2611",
+                "6201"
+              ]
+            },
+            {
+              "id": "CAP-76",
+              "name": "Autoprotection électronique drone",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Modules miniatures de brouillage/leurrage embarqués sur drones pour contrer les défenses C-UAS adverses. Détection de menace RF, saut de fréquence adaptatif, techniques ECCM.",
+              "civil_examples": "Télécoms (techniques anti-interférences), IoT (spread spectrum), Wi-Fi (frequency hopping), radio amateur",
+              "bottleneck": "Leçon Ukraine: les drones sans protection électronique sont neutralisés en quelques minutes en zone contestée. L'arbre traite le C-UAS offensif mais pas la survie du drone. Miniaturisation: défi technique. MC2 Technologies, Thales travaillent sur des modules compacts.",
+              "programmes": [
+                "drones",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2630",
+                "2651"
+              ]
+            },
+            {
+              "id": "CAP-78",
+              "name": "Systèmes de largage et emport de charge",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Mécanismes de largage électromécanique, rails d'emport, attaches largables pour drones d'attaque et de livraison logistique. Servomoteurs de largage, systèmes de visée.",
+              "civil_examples": "Agriculture (épandage aérien), lutte anti-incendie (largage eau), livraison par drone (Amazon, Wing), pêche (largage appâts)",
+              "bottleneck": "Drones de classe supérieure au FPV doivent larguer des charges (grenades, munitions, colis logistiques). Leçon Ukraine: bricolage artisanal actuel. Mécanisme simple mais fiabilité critique. Production de masse inexistante.",
+              "programmes": [
+                "drones"
+              ],
+              "nace_codes": [
+                "2562",
+                "2829"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicules_blindes",
+      "name": "Véhicules blindés",
+      "level": "programme",
+      "criticality": "haute",
+      "context": "Programme SCORPION: renouvellement complet de la flotte blindée française (Griffon, Jaguar, Serval). KNDS (Nexter) maître d'œuvre. Cadence actuelle: ~200 véhicules/an. En haute intensité, pertes estimées 10-20% de la flotte engagée en quelques semaines. Enjeu: capacité de régénération rapide et réparation en théâtre. Motorisation Volvo Penta (Suède), blindage SSAB (Suède): dépendances critiques intra-européennes.",
+      "children": [
+        {
+          "id": "vb_scorpion",
+          "name": "Blindés SCORPION",
+          "level": "categorie",
+          "context": "Griffon (VBMR 6x6, 1872 commandés), Jaguar (EBRC 6x6, 300 commandés), Serval (VBMR léger, 978 commandés). Blindage modulaire acier+composite+céramique. Motorisation Volvo Penta D13. Optronique tourelle: Safran/Thales. SCORPION = vétronique intégrée (SICS). Production: Nexter Roanne, Arquus Limoges/Marolles.",
+          "children": [
+            {
+              "id": "CAP-20",
+              "name": "Tôles acier haute résistance (blindage)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Laminage et traitement thermique de tôles acier à très haute dureté (>450 HB, classe ARMOX). Découpe plasma/laser, pliage et formage de coques blindées.",
+              "civil_examples": "Mines (godets d'excavateurs anti-usure), construction (engins TP), naval (coques), énergie (réservoirs sous pression)",
+              "bottleneck": "SSAB (Suède) quasi-monopole mondial sur acier blindage ARMOX/RAMOR. ArcelorMittal ne produit pas d'acier blindage. Aucun producteur français qualifié. Stock national quasi nul. Délai commande: 6-12 mois.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2410",
+                "2420",
+                "2550",
+                "2920"
+              ]
+            },
+            {
+              "id": "CAP-19",
+              "name": "Moteurs diesel industriels",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fonderie bloc-cylindres, usinage vilebrequins/culasses, assemblage moteurs diesel 200-800 CV. Tests au banc d'essai.",
+              "civil_examples": "Poids lourds (Renault Trucks, DAF), engins TP (Caterpillar, Liebherr), groupes électrogènes, naval (propulsion), ferroviaire",
+              "bottleneck": "Volvo Penta (Suède) fournit le D13 pour SCORPION. Pas de motoriste diesel militaire souverain en France. Fonderie bloc-cylindres: très capitalistique. Arquus (ex-Renault Trucks Defense) assemble mais ne fabrique pas les moteurs.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2811",
+                "2910",
+                "2899",
+                "2932"
+              ]
+            },
+            {
+              "id": "CAP-21",
+              "name": "Transmissions et réducteurs mécaniques",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Taillage d'engrenages de précision, assemblage de boîtes de vitesses automatiques et réducteurs pour véhicules lourds (20-40 tonnes). Traitements de surface (cémentation, nitruration).",
+              "civil_examples": "Poids lourds (ZF, Allison), engins TP, éolien (multiplicateurs), naval (réducteurs), industrie (motoréducteurs)",
+              "bottleneck": "Très peu de fournisseurs de transmissions lourdes: SESM (filiale Safran) pour chars, Renk (Allemagne). ZF (Allemagne) pour boîtes automatiques. Pas de capacité souveraine française pour transmissions >20t.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2815",
+                "2814"
+              ]
+            },
+            {
+              "id": "CAP-13",
+              "name": "Céramiques techniques (SiC, B4C, alumine)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Frittage et pressage isostatique à chaud (HIP) de céramiques balistiques: carbure de bore (B4C), carbure de silicium (SiC), alumine. Usinage céramique par rectification diamant.",
+              "civil_examples": "Semi-conducteurs (substrats SiC), abrasifs industriels, pièces d'usure (buses, joints), médical (prothèses céramique), blindage civil (véhicules VIP)",
+              "bottleneck": "B4C: 1 producteur européen majeur (Saint-Gobain/3M). SiC poudres: dépendance Chine. Presses HIP: très capitalistiques. CoorsTek, Morgan Advanced Materials. En France: Saint-Gobain Cavaillon (alumine), quelques PME.",
+              "programmes": [
+                "vehicules_blindes",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2344",
+                "2399"
+              ]
+            },
+            {
+              "id": "CAP-31",
+              "name": "Actuateurs et servomoteurs",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de vérins électriques et hydrauliques, servomoteurs de tourelle, actionneurs de trappe. Commande de puissance et électronique de contrôle.",
+              "civil_examples": "Aéronautique (commandes de vol), industrie (robotique), naval (safrans), énergie (vannes), médical (prothèses)",
+              "bottleneck": "Dépendance Moog (USA) et Parker Hannifin (USA) pour vérins haute performance. PME françaises (SKF Motion Technologies, Eaton) à capacité limitée. Aimants pour moteurs: dépendance Chine.",
+              "programmes": [
+                "vehicules_blindes",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2712",
+                "2711"
+              ]
+            },
+            {
+              "id": "CAP-28",
+              "name": "Soudure structures métalliques lourdes",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Soudure MIG/TIG/laser sur acier et aluminium de forte épaisseur (>10mm). Assemblage de coques blindées, châssis, tourelles. Contrôle non destructif (radiographie, ultrasons).",
+              "civil_examples": "Naval (coques de navires), construction (charpentes métalliques), énergie (cuves, tuyauteries), ferroviaire (bogies), offshore (plateformes)",
+              "bottleneck": "Pénurie de soudeurs qualifiés en France (plusieurs milliers de postes non pourvus). Certification soudeur blindage: 6-12 mois. Postes de soudure robotisée: investissement lourd. KNDS Roanne et Arquus principaux utilisateurs.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2511",
+                "2512",
+                "2892",
+                "3011"
+              ]
+            },
+            {
+              "id": "CAP-79",
+              "name": "Vitrages blindés (verre balistique feuilleté)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de vitrages transparents balistiques: verre trempé multicouche + polycarbonate + intercalaires PVB. Épaisseur 50-100mm. Conformité STANAG 4569.",
+              "civil_examples": "Sécurité (véhicules VIP, ambassades), banques (guichets blindés), bijouteries, bâtiments sensibles (tribunaux)",
+              "bottleneck": "Saint-Gobain Sekurit et AGC (Belgique): principaux fournisseurs. Lamineurs qualifiés balistique très rares. Épaisseur et qualité optique = compromis difficile. Régénération d'un véhicule = souvent remplacement du vitrage (pièce d'usure n°1 après impact).",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2312",
+                "2319"
+              ]
+            },
+            {
+              "id": "CAP-80",
+              "name": "Protection NBC véhiculaire",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de systèmes de surpression NBC pour véhicules blindés, filtres à charbon actif haute capacité, détecteurs chimiques embarqués (spectrométrie de mobilité ionique).",
+              "civil_examples": "Nucléaire (filtration HEPA), industrie chimique (protection travailleurs), bâtiments sensibles (filtration HVAC), pompiers (ARI)",
+              "bottleneck": "NBC-Sys (filiale KNDS/Nexter) et Proengin principaux fabricants français. En HI, la menace chimique redevient crédible (doctrine russe). Tout véhicule SCORPION intègre une protection NBC. Filtres à charbon actif: consommables à renouveler.",
+              "programmes": [
+                "vehicules_blindes",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2030",
+                "2829"
+              ]
+            },
+            {
+              "id": "CAP-83",
+              "name": "Blindages réactifs / systèmes de protection active (APS)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de briques de blindage réactif explosif (ERA) et de systèmes de protection active (radar de détection + neutralisation projectile). Chimie ATEX + métallurgie + électronique.",
+              "civil_examples": "Sécurité civile (détection d'objets rapides), automobile (systèmes de collision avoidance), recherche balistique",
+              "bottleneck": "Leçon Ukraine: les véhicules sans ERA/APS sont vulnérables aux drones FPV et ATGM. MBDA développe PROMISE (APS). Rafael (Israël) Trophy = référence. Aucune production série en France. Briques ERA = mini-charges explosives, réglementation ATEX.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2540",
+                "2550"
+              ]
+            },
+            {
+              "id": "CAP-81",
+              "name": "Pneumatiques run-flat et chenilles",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de pneumatiques avec inserts run-flat (roulage 50+ km pneu crevé), bandages pleins, chenilles métalliques et caoutchouc pour véhicules blindés.",
+              "civil_examples": "Automobile (pneus run-flat BMW, Mercedes), engins TP (pneus pleins chariots élévateurs), agriculture (chenilles tracteurs), BTP",
+              "bottleneck": "Michelin Défense et Hutchinson (inserts run-flat): principaux fournisseurs français. Chenilles: Soucy (Canada), DIEHL (Allemagne). Pneus crevés = première cause d'immobilisation en opération. Insert run-flat = pièce d'usure à fort taux de remplacement.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2211",
+                "2219"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vb_logistique",
+          "name": "Véhicules logistiques",
+          "level": "categorie",
+          "context": "Camions logistiques (PPLOG, VLRA), véhicules de dépannage, porte-chars. Arquus (ex-Renault Trucks Defense) principal fournisseur. Pertes logistiques en HI potentiellement élevées (cibles faciles). Volume: milliers de véhicules nécessaires pour soutenir un corps d'armée.",
+          "children": [
+            {
+              "id": "CAP-26",
+              "name": "Traitement de surface (anodisation, PVD, chromage)",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Revêtements protecteurs et fonctionnels: anodisation aluminium, chromage dur, nickelage, PVD/CVD, peintures techniques. Protection anticorrosion des véhicules et composants.",
+              "civil_examples": "Aéronautique (pièces moteur), automobile (pièces décoratives), outillage (revêtements durs), médical (implants), horlogerie",
+              "bottleneck": "REACH restreint le chromage dur hexavalent (Cr6+): transition vers chrome trivalent ou PVD en cours. Bains de traitement: chimie importée. Capacité française correcte mais en consolidation (fermetures de petits ateliers).",
+              "programmes": [
+                "vehicules_blindes",
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2561",
+                "2562"
+              ]
+            },
+            {
+              "id": "CAP-44",
+              "name": "Traitement thermique métaux",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Trempe, revenu, cémentation, nitruration de pièces mécaniques en acier. Fours à atmosphère contrôlée, trempe sous vide, induction.",
+              "civil_examples": "Automobile (engrenages, arbres), aéronautique (pièces moteur), outillage (matrices), roulements, ressorts",
+              "bottleneck": "Capacité existante en France (Bodycote, HEF Groupe, Thermi-Lyon). Sous-traitants régionaux nombreux. Qualification défense: 6-12 mois. Pas de goulet critique si volumes raisonnables.",
+              "programmes": [
+                "vehicules_blindes",
+                "munitions"
+              ],
+              "nace_codes": [
+                "2561",
+                "2562"
+              ]
+            },
+            {
+              "id": "CAP-82",
+              "name": "Climatisation et ventilation militaire",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Systèmes de climatisation/chauffage pour compartiments de combat, gestion de la charge thermique des électroniques embarquées. Fonctionnement -40°C à +55°C.",
+              "civil_examples": "Automobile (climatisation), ferroviaire (HVAC rames), data centers (refroidissement), bâtiment (CVC), aéronautique (packs de conditionnement d'air)",
+              "bottleneck": "Liebherr, Thales, Valeo: fournisseurs potentiels. En opération Sahel ou arctique, la climatisation est critique pour équipages et électroniques. Véhicules SCORPION dissipent beaucoup de chaleur (vétronique). Systèmes durcis MIL: niche.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2825",
+                "2829",
+                "2813"
+              ]
+            },
+            {
+              "id": "CAP-84",
+              "name": "Vétronique et IHM véhiculaire",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Écrans tactiques multifonctions durcis, système d'information et de commandement (SICS), intégration capteurs/effecteurs dans l'habitacle. Bus de données véhiculaire (MIL-STD-1553, Ethernet embarqué).",
+              "civil_examples": "Automobile (tableaux de bord numériques, ADAS), ferroviaire (TCMS), naval (systèmes de management de combat), aviation (cockpit glass)",
+              "bottleneck": "Programme SCORPION repose sur la vétronique intégrée SICS (Thales/Atos). Production: centaines d'ensembles/an. Écrans durcis: dépendance dalles Asie. Bus MIL-STD-1553 → Ethernet: transition en cours. Intégration logicielle complexe.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2620",
+                "2651"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missiles",
+      "name": "Missiles et défense anti-aérienne",
+      "level": "programme",
+      "criticality": "haute",
+      "context": "MBDA France: principal missilier européen. Missiles antichar (Akeron MP ex-MMP), défense AA (Aster 15/30, Mistral), croisière (SCALP). Production actuelle: dizaines/centaines par an vs milliers nécessaires en HI. Coût unitaire élevé (Aster: ~2M€, Akeron: ~200k€). Enjeu: réduire coûts et augmenter cadences. Temps de production d'un Aster: ~24 mois.",
+      "children": [
+        {
+          "id": "mis_antichar",
+          "name": "Missile antichar Akeron/MMP",
+          "level": "categorie",
+          "context": "Akeron MP (ex-MMP): missile antichar filoguidé/IR fire-and-forget. MBDA Bourges. Production: ~100/an objectif 400+/an. Autodirecteur IR non refroidi. Charge tandem antiblindage. Consommation estimée HI: >1000/mois pour brigade interarmes.",
+          "children": [
+            {
+              "id": "CAP-33",
+              "name": "Charges formées et fragmentation",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de liners en cuivre OFHC ou tantale pour charges creuses (effet Munroe). Usinage de fragments préformés (éclats). Assemblage charges tandem anti-ERA.",
+              "civil_examples": "Pétrole (perforating guns pour forage), démolition (charges de découpe), mines (abattage), spatial (découpe pyrotechnique)",
+              "bottleneck": "Tantale: dépendance Afrique (RDC, Rwanda) >60%. Cuivre OFHC haute pureté: peu de fournisseurs. Usinage liner parabolique: très haute précision. TDA/MBDA intégrateurs. Formation de jet: simulation numérique critique.",
+              "programmes": [
+                "missiles",
+                "munitions"
+              ],
+              "nace_codes": [
+                "2540",
+                "2550"
+              ]
+            },
+            {
+              "id": "CAP-18",
+              "name": "Intégration FPGA / traitement signal",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Programmation et intégration de FPGA (Field Programmable Gate Array) pour traitement du signal en temps réel. Cartes de traitement embarquées. Algorithmes de guidage, brouillage, radar.",
+              "civil_examples": "Télécoms (stations de base 5G), finance (trading haute fréquence), vidéo (encodage temps réel), médical (imagerie), automobile (ADAS)",
+              "bottleneck": "Monopole AMD/Xilinx et Intel/Altera (USA). Zéro fabrication de FPGA en Europe. Réglementation ITAR/EAR sur FPGA haute performance. Design FR possible (Thales, MBDA) mais composants importés. Obsolescence: cycles courts.",
+              "programmes": [
+                "missiles",
+                "drones",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2611",
+                "2612",
+                "2620"
+              ]
+            },
+            {
+              "id": "CAP-42",
+              "name": "Gestion d'énergie / alimentation",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Conception et fabrication de régulateurs de tension, convertisseurs DC/DC, alimentations à découpage pour systèmes embarqués. Batteries thermiques pour missiles.",
+              "civil_examples": "Automobile (électronique de puissance), télécoms (alimentations), informatique (PSU), solaire (onduleurs), IoT",
+              "bottleneck": "STMicroelectronics (France/Italie) = atout souverain pour composants de puissance. Infineon (DE), Texas Instruments (USA) concurrents. Batteries thermiques: très niche (Saft/EaglePicher).",
+              "programmes": [
+                "missiles",
+                "drones",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2711",
+                "2712",
+                "2720",
+                "2790"
+              ]
+            },
+            {
+              "id": "CAP-89",
+              "name": "Cryogénie miniature embarquée",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de micro-refroidisseurs Stirling ou Joule-Thomson pour refroidissement de détecteurs IR à 77K dans les autodirecteurs de missiles. Compresseurs miniatures, échangeurs micro-usinés.",
+              "civil_examples": "Médical (cryochirurgie), recherche (cryostats), spatial (refroidissement instruments), supraconducteurs, conservation biologique",
+              "bottleneck": "Sans refroidissement, les détecteurs InSb/MCT des autodirecteurs ne fonctionnent pas. Ricor (Israël) leader mondial. Thales Cryogenics (Pays-Bas). Aucun producteur français de micro-coolers. Safran/MBDA dépendent de fournisseurs étrangers. Volume: centaines/an vs milliers nécessaires.",
+              "programmes": [
+                "missiles",
+                "drones"
+              ],
+              "nace_codes": [
+                "2825",
+                "2829"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mis_defense_aa",
+          "name": "Défense anti-aérienne Aster/Mistral",
+          "level": "categorie",
+          "context": "Aster 15/30 (MBDA): missile de défense aérienne pour SAMP/T et PAAMS (frégate). ~2M€/unité, production ~100/an. Mistral (MBDA): MANPADS IR, plus simple et moins cher. Consommation Ukraine: des centaines de missiles AA tirés par mois. Stock OTAN très bas.",
+          "children": [
+            {
+              "id": "CAP-27",
+              "name": "Fonderie de précision (cire perdue)",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Investment casting (moulage à la cire perdue) de pièces en superalliages (Inconel, Waspaloy) et titane. Ailettes de turbine, composants structurels complexes.",
+              "civil_examples": "Aéronautique (aubes de turbine), médical (prothèses), joaillerie, dentaire, pompes industrielles",
+              "bottleneck": "Superalliages nickel importés (Special Metals USA, VDM Allemagne). Capacité française saturée par aéronautique civile (Safran, Aubert & Duval). Délai de fabrication: 8-16 semaines. Contrôle non destructif obligatoire.",
+              "programmes": [
+                "missiles",
+                "drones"
+              ],
+              "nace_codes": [
+                "2453",
+                "2454"
+              ]
+            },
+            {
+              "id": "CAP-09",
+              "name": "Fabrication PCB multicouches",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Production de circuits imprimés >6 couches, HDI (High Density Interconnect), flex-rigides. Substrats haute fréquence (Rogers, PTFE). PCB pour autodirecteurs, calculateurs embarqués.",
+              "civil_examples": "Télécoms (cartes 5G), informatique (cartes mères), automobile (ADAS), médical (implants), aérospatial",
+              "bottleneck": "Production PCB quasi disparue en France et Europe. Cimulec, ELVIA PCB: petites capacités. >90% PCB mondiaux: Chine, Taïwan, Corée. Substrats RF spéciaux: Rogers (USA). Relocalisation: investissement lourd.",
+              "programmes": [
+                "missiles",
+                "drones",
+                "guerre_electronique",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2611",
+                "2612"
+              ]
+            },
+            {
+              "id": "CAP-85",
+              "name": "Radômes céramique/composite",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de radômes en céramique (nitrure de silicium, Pyrocéram), quartz fondu ou composites pour transmission d'ondes radar à travers le nez du missile. Résistance thermique et aérodynamique.",
+              "civil_examples": "Télécoms (radômes d'antennes), météorologie (radômes radar), aéronautique civile (nez d'avion), maritime (antennes protégées)",
+              "bottleneck": "Tout missile à autodirecteur radar (Aster, Meteor) nécessite un radôme. Matériaux très spécifiques (transparence micro-ondes à haute température). Saint-Gobain Aerospace, MBDA en interne. Très peu de fournisseurs qualifiés. Qualification: 12+ mois.",
+              "programmes": [
+                "missiles"
+              ],
+              "nace_codes": [
+                "2344",
+                "2399",
+                "2229"
+              ]
+            },
+            {
+              "id": "CAP-86",
+              "name": "Joints et étanchéité haute température",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de joints toriques et plats en élastomères haute température (Viton, Kalrez, PTFE), joints métalliques C-ring pour chambres de combustion missile et moteurs.",
+              "civil_examples": "Aéronautique (moteurs), pétrole (vannes haute pression), nucléaire (étanchéité cuve), automobile (turbocompresseurs), chimie (réacteurs)",
+              "bottleneck": "Joints de chambre de combustion propergol: résistance >1500°C pendant quelques secondes. Parker Hannifin (USA), Freudenberg (DE), Trelleborg (SE). En France: quelques PME (Techné, Senga). Qualification missile: longue et coûteuse.",
+              "programmes": [
+                "missiles"
+              ],
+              "nace_codes": [
+                "2219",
+                "2229"
+              ]
+            },
+            {
+              "id": "CAP-87",
+              "name": "Câblage interne missile",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Câblage miniature avec connectique anti-vibration, résistance aux chocs de lancement (>20g), blindage CEM interne. Assemblage en espace confiné. Harnais pyro-résistants.",
+              "civil_examples": "Spatial (câblage satellite), aéronautique (harnais moteur), médical (câblage implants), robotique (câblage bras articulés)",
+              "bottleneck": "Chaque missile contient un harnais complexe de 50-200 fils assemblé manuellement. Contraintes spécifiques (miniaturisation, pyro-résistance, poids). Distinct de CAP-30 (connecteurs génériques). Main d'œuvre très qualifiée. MBDA/Thales intègrent en interne.",
+              "programmes": [
+                "missiles"
+              ],
+              "nace_codes": [
+                "2732",
+                "2733",
+                "2731"
+              ]
+            },
+            {
+              "id": "CAP-88",
+              "name": "Conteneurs-lanceurs (canisters)",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de conteneurs-lanceurs en composite ou aluminium, rails de lancement, systèmes d'éjection. Étanchéité longue durée (stockage 10-20 ans). Protection transport et stockage.",
+              "civil_examples": "Emballage industriel (conteneurs techniques), spatial (tubes de lancement), transport (conteneurs spéciaux), offshore (tubes de protection)",
+              "bottleneck": "Un missile sans son conteneur-lanceur est inutilisable. Aster: canister vertical pour SAMP/T. Akeron: tube lanceur. Mistral: tube jetable. Production de canisters = grande série composite ou métallurgie + joints d'étanchéité longue durée. MBDA produit en interne.",
+              "programmes": [
+                "missiles"
+              ],
+              "nace_codes": [
+                "2550",
+                "2511"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mis_contre_uas",
+          "name": "Contre-UAS (C-UAS)",
+          "level": "categorie",
+          "context": "Menace drone devenue n°1 sur le champ de bataille. Systèmes C-UAS combinant détection (radar, RF, optronique) et neutralisation (brouillage, laser, projectile). Marché en explosion. Thales, MBDA, CS Group positionnés. Besoin: milliers de systèmes portables + centaines de systèmes véhiculés.",
+          "children": [
+            {
+              "id": "CAP-35",
+              "name": "Détection/analyse spectrale RF",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de récepteurs large bande, analyseurs de spectre embarqués, systèmes de goniométrie pour détection et localisation d'émissions radio (drones, communications).",
+              "civil_examples": "Télécoms (monitoring spectre), broadcast (contrôle fréquences), sécurité (détection micros), recherche (radioastronomie), EMC (tests CEM)",
+              "bottleneck": "Convertisseurs analogique-numérique (ADC) haute vitesse: monopole USA (Analog Devices, Texas Instruments). Thales (Gennevilliers), Rohde & Schwarz (DE) principaux acteurs. Volume actuel: dizaines/an.",
+              "programmes": [
+                "missiles",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2651",
+                "2630"
+              ]
+            },
+            {
+              "id": "CAP-36",
+              "name": "Brouilleurs directionnels RF",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication d'amplificateurs de puissance large bande, antennes directionnelles, générateurs de signaux de brouillage. Systèmes anti-drone à énergie dirigée RF.",
+              "civil_examples": "Télécoms (amplificateurs de station de base), recherche (générateurs RF), industrie (chauffage par induction), médical (IRM)",
+              "bottleneck": "Pas de production en série de brouilleurs en Europe. Amplis GaN: UMS (France) seule fonderie européenne mais capacité limitée. Antennes phased array compactes: R&D en cours. MC2 Technologies, Thales positionnés.",
+              "programmes": [
+                "missiles",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2630",
+                "2651"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equipement_soldat",
+      "name": "Équipement du soldat",
+      "level": "programme",
+      "criticality": "haute",
+      "context": "Programme FELIN puis Système du combattant futur. Équipement individuel pour 77 000 soldats de l'armée de terre (200 000+ avec réserves). Protection balistique, optronique, communications. En HI, pertes d'équipement massives nécessitent régénération rapide. Dépendance critique sur fibres aramide (USA/Japon), céramique balistique, et composants optroniques.",
+      "children": [
+        {
+          "id": "equip_protection",
+          "name": "Protection balistique individuelle",
+          "level": "categorie",
+          "context": "Gilets pare-balles niveau IV (céramique + backing composite), casques balistiques. Poids cible: <10kg pour protection complète. Fabricants: Safariland, Armorers (FR), NP Aerospace. Aramide: Kevlar (DuPont) ou Twaron (Teijin). Céramique: B4C ou SiC.",
+          "children": [
+            {
+              "id": "CAP-37",
+              "name": "Plaques balistiques corporelles",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Pressage et frittage de tuiles céramiques (B4C, SiC, alumine) puis collage sur backing composite (UHMWPE/aramide). Assemblage en plaques SAPI/ESAPI. Test balistique V50.",
+              "civil_examples": "Sécurité privée (gilets civils), véhicules VIP (blindage), protection bâtiments sensibles",
+              "bottleneck": "Qualification balistique V50: 6-12 mois de tests par configuration. Céramique B4C: 1 producteur EU (Saint-Gobain). UHMWPE (Dyneema): DSM (Pays-Bas) monopole. Production française très limitée (quelques PME). Volume OTAN: millions de plaques nécessaires.",
+              "programmes": [
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "1392",
+                "2344",
+                "2229"
+              ]
+            },
+            {
+              "id": "CAP-14",
+              "name": "Fibres et textiles aramide",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Filature et tissage de para-aramide haute ténacité (Kevlar, Twaron). Fabrication de tissus balistiques multicouches. Découpe et assemblage de coques de casques.",
+              "civil_examples": "Automobile (courroies, pneus), construction (renfort béton), câbles (fibres optiques), marine (cordages), sport (voiles)",
+              "bottleneck": "Duopole mondial DuPont (Kevlar, USA) / Teijin (Twaron, Japon). Zéro production de fibre para-aramide en France. Tissage: Hexcel, Porcher Industries (FR) mais matière première importée. UHMWPE (Dyneema): concurrent mais même dépendance.",
+              "programmes": [
+                "equipement_soldat",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "1310",
+                "1330",
+                "1399"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "equip_optronique",
+          "name": "Optronique individuelle",
+          "level": "categorie",
+          "context": "Jumelles de vision nocturne (JVN), caméras thermiques portables, viseurs jour/nuit pour armes individuelles. Programme FELIN inclut lunette IR sur FAMAS/HK416. Tubes intensificateurs: Photonis (Brive). Bolomètres: Lynred (Grenoble). Volume: dizaines de milliers de dispositifs.",
+          "children": [
+            {
+              "id": "CAP-11",
+              "name": "Tubes intensificateurs de lumière",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de galettes de microcanaux (MCP), dépôt de photocathodes GaAs/GaAsP, assemblage en tubes intensificateurs Gen II+/Gen III. Conditions salle blanche.",
+              "civil_examples": "Astronomie amateur (observation nocturne), sécurité (caméras basse lumière), recherche (spectrométrie), maritime (navigation nocturne)",
+              "bottleneck": "Photonis (Brive-la-Gaillarde) seul fabricant européen de tubes Gen II+/III. L3Harris/Elbit concurrents (USA/Israël). GaAs wafers: peu de fournisseurs. Photonis racheté par Teledyne (USA) → enjeu souveraineté (blocage CIEEMG). Production: ~10 000/an vs >50 000 nécessaires en HI.",
+              "programmes": [
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2670",
+                "2651"
+              ]
+            },
+            {
+              "id": "CAP-38",
+              "name": "Displays/écrans durcis",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication d'écrans LCD/OLED durcis (chocs, températures extrêmes), traitement antireflet, intégration dans viseurs et tablettes tactiques. Lisibilité en plein soleil.",
+              "civil_examples": "Automobile (tableaux de bord), aviation (écrans cockpit), industrie (IHM), maritime (écrans pont), outdoor (GPS randonnée)",
+              "bottleneck": "Dalles LCD/OLED: dépendance totale Asie (Samsung, LG, BOE). Intégration/durcissement en Europe possible (Elbit, Thales). Traitement antireflet: quelques spécialistes FR. Marché niche.",
+              "programmes": [
+                "equipement_soldat",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2620",
+                "2640"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "equip_communications",
+          "name": "Communications tactiques CONTACT",
+          "level": "categorie",
+          "context": "Programme CONTACT: radios logicielles (SDR) pour toutes les armées. Thales maître d'œuvre. Radios portatives, véhiculaires, relais. Chiffrement souverain. Production: quelques centaines/an vs 10 000+ nécessaires pour équiper toutes les unités + alliés. Batteries: autonomie 24-72h critique.",
+          "children": [
+            {
+              "id": "CAP-16",
+              "name": "Composants RF/hyperfréquences GaN/GaAs",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de MMIC (Monolithic Microwave Integrated Circuits), amplificateurs de puissance GaN/GaAs, oscillateurs, mélangeurs. Fonderie III-V sur substrats SiC.",
+              "civil_examples": "Télécoms (stations de base 5G), satellite (transpondeurs), automobile (radar 77GHz), Wi-Fi 6E, liaison point-à-point",
+              "bottleneck": "UMS (United Monolithic Semiconductors, Villebon) seule fonderie GaN/GaAs en France/Europe. Capacité limitée. Substrats SiC: Wolfspeed (USA), II-VI. Wafers GaN-on-SiC: peu de sources. WIN Semiconductors (Taïwan) concurrent.",
+              "programmes": [
+                "equipement_soldat",
+                "guerre_electronique",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2611",
+                "2612"
+              ]
+            },
+            {
+              "id": "CAP-39",
+              "name": "Modules cryptographiques matériels",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Conception et fabrication de puces et modules de chiffrement certifiés (HSM, TPM), générateurs de nombres aléatoires matériels. Chiffrement souverain pour communications classifiées.",
+              "civil_examples": "Banque (HSM paiement), télécoms (SIM), identité (passeports biométriques), cloud (chiffrement données), IoT sécurisé",
+              "bottleneck": "Souveraineté absolue requise: pas de composant étranger dans la chaîne crypto. Fabrication wafers: TSMC/GlobalFoundries (pas de fonderie avancée en EU). STMicro (Rousset/Crolles) pour puces sécurisées. ANSSI certification: 12-24 mois. Thales (ex-Gemalto) principal intégrateur.",
+              "programmes": [
+                "equipement_soldat",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2611",
+                "2620"
+              ]
+            },
+            {
+              "id": "CAP-30",
+              "name": "Connecteurs et harnais électriques",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de connecteurs mil-spec (MIL-DTL-38999, MIL-DTL-5015), câblage et harnais pour systèmes embarqués. Sertissage, surmoulage, blindage CEM.",
+              "civil_examples": "Aéronautique (harnais avion), automobile (faisceaux), ferroviaire (câblage), médical (connectique), industrie (automation)",
+              "bottleneck": "Connecteurs: Amphenol et TE Connectivity (USA) dominent le mil-spec. Radiall (FR) positionné mais plus petit. Harnais: production délocalisée Maroc/Tunisie pour coûts. Main d'œuvre câblage: très intensive. Qualification MIL: 6-12 mois.",
+              "programmes": [
+                "equipement_soldat",
+                "vehicules_blindes",
+                "drones"
+              ],
+              "nace_codes": [
+                "2732",
+                "2733"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "equip_soutien",
+          "name": "Soutien et protection spécialisée",
+          "level": "categorie",
+          "context": "Au-delà de la protection balistique et de l'optronique, le soldat en haute intensité a des besoins massifs en protection NBC, médical de combat, protection auditive. Ces équipements sont consommés en quantités énormes et leur production est souvent sous-dimensionnée.",
+          "children": [
+            {
+              "id": "CAP-90",
+              "name": "Équipement individuel NBC",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Tenues de protection NRBC (surpantalon, veste), masques à gaz avec cartouches filtrantes, auto-injecteurs d'atropine/pralidoxime, papier détecteur, dosimètres individuels.",
+              "civil_examples": "Industrie chimique (EPI), nucléaire (combinaisons), pompiers (ARI), désamiantage, laboratoires biologiques",
+              "bottleneck": "Ouvry (Lyon) et Paul Boyé Technologies (Labarthe-sur-Lèze) produisent les tenues NRBC françaises. BRIG (masques). Cartouches filtrantes: Scott Safety, 3M. En HI, menace chimique crédible (doctrine russe). 200 000+ kits nécessaires. Capacité de surge inconnue.",
+              "programmes": [
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2030",
+                "1419",
+                "2229"
+              ]
+            },
+            {
+              "id": "CAP-91",
+              "name": "Dispositifs médicaux tactiques (TCCC)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Garrots tactiques (CAT/SOFTT), pansements hémostatiques (QuikClot, Celox), kits de cricothyrotomie, moniteurs de signes vitaux portables, kits de transfusion de campagne.",
+              "civil_examples": "Médical civil (urgences, SAMU), secourisme (formation), sport extrême (trousse de secours), industrie (premiers soins)",
+              "bottleneck": "En HI, le 'golden hour' (évacuation <1h) n'est plus garanti. Le kit individuel TCCC sauve des vies. Production: quasi exclusivement USA (North American Rescue) et Israël. Très peu de fabricants européens. Volume: centaines de milliers de kits.",
+              "programmes": [
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "3250",
+                "2660",
+                "2120"
+              ]
+            },
+            {
+              "id": "CAP-92",
+              "name": "Protection auditive active",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Casques anti-bruit actifs avec communication intégrée, protection balistique auriculaire, réduction de bruit adaptative. Microphones directionnels, haut-parleurs intégrés.",
+              "civil_examples": "Industrie (protection bruit usines), aviation (casques pilote), chasse/tir sportif, construction (BTP), concerts",
+              "bottleneck": "Pertes auditives = première blessure en nombre au combat. 3M/Peltor (USA), Savox (Finlande), Invisio (Danemark). Très peu de fabricants français. Volume: 200 000+ sets pour les forces. Batteries et électronique: dépendance composants importés.",
+              "programmes": [
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2640",
+                "2651"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guerre_electronique",
+      "name": "Guerre électronique",
+      "level": "programme",
+      "criticality": "haute",
+      "context": "Domination du spectre électromagnétique: condition sine qua non du combat moderne. Brouillage, écoute, goniométrie, leurrage. Thales (SPECTRA, ANTARES), MBDA, CS Group principaux acteurs FR. Ukraine a démontré l'importance critique de la GE (brouillage GPS, anti-drone RF). Production actuelle: dizaines de systèmes/an. Enjeu: passage à l'échelle pour équiper chaque section d'un moyen C-UAS/GE.",
+      "children": [
+        {
+          "id": "ge_brouillage",
+          "name": "Brouillage",
+          "level": "categorie",
+          "context": "Systèmes de brouillage offensif (communications, GPS, datalinks drone) et défensif (autoprotection véhicules/aéronefs). Bandes HF à Ka. Amplificateurs GaN haute puissance. Antennes large bande. Traitement numérique pour brouillage adaptatif.",
+          "children": [
+            {
+              "id": "CAP-17",
+              "name": "Antennes et réseaux phasés",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication d'antennes (dipôles, patch, spirales, cornets), réseaux d'antennes à balayage électronique (AESA). Substrats PTFE/céramique. Radômes.",
+              "civil_examples": "Télécoms (antennes relais 5G), satellite (antennes VSAT), automobile (radar), broadcast (antennes FM/TV), Wi-Fi (MIMO)",
+              "bottleneck": "Matériaux PTFE et ferrites importés. Conception AESA: Thales, MBDA maîtrisent. Fabrication en série: peu d'expérience. Substrats micro-ondes: Rogers (USA). Radômes composites: savoir-faire FR existant.",
+              "programmes": [
+                "guerre_electronique",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2630",
+                "2611"
+              ]
+            },
+            {
+              "id": "CAP-45",
+              "name": "Fabrication additive métal (SLM/EBM)",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Impression 3D métal par fusion laser sur lit de poudre (SLM) ou faisceau d'électrons (EBM). Fabrication de composants complexes en titane, Inconel, acier inox. Prototypage rapide et petites séries.",
+              "civil_examples": "Aéronautique (injecteurs, supports), médical (implants sur mesure), automobile (prototypage), énergie (turbines), outillage (inserts moule)",
+              "bottleneck": "AddUp (joint venture Michelin/Fives, Cébazat) = atout souverain français. Machines SLM: EOS (DE), SLM Solutions (DE), 3D Systems (USA). Poudres métalliques: Aubert & Duval (FR), Carpenter (USA). Certification pièces: long et coûteux.",
+              "programmes": [
+                "guerre_electronique",
+                "missiles",
+                "drones"
+              ],
+              "nace_codes": [
+                "2561",
+                "2562",
+                "2599"
+              ]
+            },
+            {
+              "id": "CAP-100",
+              "name": "Leurres et contre-mesures (IR, radar, EM)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de leurres IR (flares magnésium/PTFE), leurres radar (chaff: paillettes métalliques), leurres tractés, générateurs de faux échos. Contre-mesures de protection des plateformes.",
+              "civil_examples": "Aviation civile (systèmes de protection optionnels), recherche (calibration radar), spectacle (pyrotechnie), signalisation",
+              "bottleneck": "Lacroix Défense (Muret) produit flares et chaff mais capacité limitée. En HI, chaque véhicule/aéronef/drone consomme des dizaines de leurres. Volume: millions de leurres nécessaires. Magnésium haute pureté: importé. Compositions IR spéciales: niche.",
+              "programmes": [
+                "guerre_electronique",
+                "drones",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2630",
+                "2651",
+                "2540"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ge_detection",
+          "name": "Détection et goniométrie",
+          "level": "categorie",
+          "context": "Systèmes SIGINT/ELINT: interception, analyse et localisation d'émissions radar et communications adverses. Récepteurs large bande (100MHz-40GHz). Antennes à gain élevé. Calculateurs de goniométrie temps réel. Thales (ELSI, RESM), CS Group (ATRACO).",
+          "children": [
+            {
+              "id": "CAP-47",
+              "name": "Guidage fibre optique",
+              "level": "capacite",
+              "criticality": "faible",
+              "description": "Tirage et bobinage de fibre optique spéciale pour guidage de missiles filoguidés (SACLOS). Gaines de protection, connecteurs optiques, bobines de dévidage.",
+              "civil_examples": "Télécoms (fibre optique FTTH), médical (endoscopes), industrie (capteurs fibre optique), instrumentation (interféromètres)",
+              "bottleneck": "MBDA internalise la production pour ses missiles filoguidés. Très niche. Fibre optique standard: nombreux fabricants (Corning, Prysmian). Fibre spéciale militaire: très peu de fournisseurs qualifiés. Non critique car volumes faibles.",
+              "programmes": [
+                "guerre_electronique",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2731",
+                "2733"
+              ]
+            },
+            {
+              "id": "CAP-98",
+              "name": "Générateurs électriques compacts haute puissance",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de générateurs diesel ou turbine compacts (50-200 kW) militarisés pour alimentation de systèmes GE, radars, shelters de commandement. Insonorisation, durcissement, faible signature.",
+              "civil_examples": "BTP (groupes électrogènes de chantier), événementiel (alimentation temporaire), télécoms (backup énergie), hôpitaux (secours électrique)",
+              "bottleneck": "Les systèmes de brouillage haute puissance (CAP-36) consomment des kilowatts. Pas de courant = pas de brouillage. SDMO/Kohler (FR), Caterpillar (USA): versions civiles. Versions militarisées (insonorisées, durcies, faible IR): production très limitée.",
+              "programmes": [
+                "guerre_electronique",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2711",
+                "2712"
+              ]
+            },
+            {
+              "id": "CAP-99",
+              "name": "Refroidissement systèmes haute puissance",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Systèmes de refroidissement liquide ou air forcé pour amplificateurs RF de puissance, lasers, calculateurs haute performance embarqués. Échangeurs compacts, pompes, fluides caloporteurs.",
+              "civil_examples": "Data centers (cooling serveurs), automobile (refroidissement batterie EV), industrie (refroidissement machines-outils), spatial (contrôle thermique)",
+              "bottleneck": "Les amplificateurs GaN (CAP-16, CAP-36) génèrent une chaleur intense. Lasers anti-drone (CAP-97): refroidissement critique. Sans refroidissement adéquat, dégradation rapide des composants. Échangeurs compacts: domaine spatial applicable. Mersen (FR), Boyd (USA).",
+              "programmes": [
+                "guerre_electronique",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2825",
+                "2829"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ge_anti_drone",
+          "name": "Anti-drone (C-UAS électronique)",
+          "level": "categorie",
+          "context": "Systèmes C-UAS par guerre électronique: détection RF des signaux de contrôle et vidéo des drones, brouillage ciblé des fréquences 2.4GHz/5.8GHz/900MHz et GPS. Systèmes portables (fusils brouilleurs) et véhiculés. Demande explosive depuis 2022. MC2 Technologies, Thales, CERBAIR positionnés en France.",
+          "children": [
+            {
+              "id": "CAP-95",
+              "name": "Systèmes C-UAS portables (fusils brouilleurs)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de systèmes anti-drone portables type fusil brouilleur: amplificateurs RF directionnels, antennes sectorielles, batteries haute capacité, interface utilisateur simplifiée. Brouillage bandes 2.4/5.8 GHz et GPS.",
+              "civil_examples": "Sécurité aéroportuaire (protection périmètre), événementiel (protection VIP), pénitentiaire (anti-drone), sites sensibles (centrales nucléaires)",
+              "bottleneck": "DroneShield (Australie), MC2 Technologies (FR), Thales positionnés. Pas de production en grande série en Europe. Chaque section d'infanterie devrait avoir un moyen C-UAS portable. Volume: milliers d'unités. Amplificateurs GaN: goulot (CAP-16).",
+              "programmes": [
+                "guerre_electronique",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2630",
+                "2651"
+              ]
+            },
+            {
+              "id": "CAP-96",
+              "name": "Détection acoustique de drones",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Réseaux de microphones directionnels, algorithmes de classification sonore par IA, triangulation acoustique. Complémentaire à la détection RF et radar.",
+              "civil_examples": "Environnement (monitoring bruit), industrie (détection de défauts par acoustique), sécurité (détection intrusion sonore), recherche (bioacoustique)",
+              "bottleneck": "Technologie complémentaire à la détection RF, fonctionne même si le drone est en mode silencieux radio. Orelia/01dB (FR), Squarehead (Norvège). IA de classification: CEA, INRIA compétents. Pas de production série mais technologie accessible.",
+              "programmes": [
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2651",
+                "2670"
+              ]
+            },
+            {
+              "id": "CAP-97",
+              "name": "Systèmes laser anti-drone",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Lasers de puissance (10-50 kW) à fibre ou à état solide pour neutralisation de drones par effet thermique. Système de poursuite et pointage, optique adaptative.",
+              "civil_examples": "Industrie (découpe/soudure laser), médical (chirurgie laser), recherche (lasers de puissance), télécoms (amplification optique)",
+              "bottleneck": "CILAS (Orléans) développe HELMA-P (laser 2 kW anti-drone). Thales, Rheinmetall positionnés. Coût par tir quasi nul vs missile. Mais puissance insuffisante aujourd'hui pour gros drones. Diodes laser: dépendance II-VI/Coherent (USA). Refroidissement critique.",
+              "programmes": [
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2651",
+                "2670"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supply_chain_amont",
+      "name": "Supply chain amont (matières premières)",
+      "level": "programme",
+      "criticality": "critique",
+      "context": "L'arbre de transformation présuppose la disponibilité des matières premières. Or la France et l'Europe sont massivement dépendantes de la Chine, de la Russie et de quelques fournisseurs uniques pour les intrants critiques de la BITD. En cas de conflit, ces flux peuvent être coupés en quelques semaines. Sans matière première, toute la chaîne de production s'arrête.",
+      "children": [
+        {
+          "id": "sca_explosifs_propulsion",
+          "name": "Précurseurs explosifs et propulsifs",
+          "level": "categorie",
+          "context": "La France ne produit plus aucun explosif brut (TNT, RDX) ni comburant de propergol (perchlorate d'ammonium). La nitrocellulose dépend à >70% de coton linters chinois. Ces 3 intrants conditionnent 100% de la production de munitions et missiles.",
+          "children": [
+            {
+              "id": "CAP-49",
+              "name": "Synthèse explosifs bruts (TNT/RDX/HMX)",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Synthèse chimique du trinitrotoluène (TNT), du cyclotriméthylènetrinitramine (RDX) et de l'octogène (HMX). Procédés de nitration, cristallisation, séchage. Sites Seveso seuil haut.",
+              "civil_examples": "Travaux publics (explosifs de démolition), mines (abattage), spatial (charges de séparation)",
+              "bottleneck": "Dernier producteur européen de TNT: Nitroerg (Pologne). RDX: quasi aucune production en France, importation USA/Inde. HMX: encore plus rare. Zero capacité de surge. Un seul fournisseur européen = point de défaillance unique.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2051",
+                "2059"
+              ]
+            },
+            {
+              "id": "CAP-50",
+              "name": "Production perchlorate d'ammonium",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Synthèse et cristallisation contrôlée de perchlorate d'ammonium (PA) qualité propulseur. Granulométrie calibrée pour propergols composites.",
+              "civil_examples": "Spatial (boosters Ariane), feux d'artifice (comburant), airbags automobile (générateurs de gaz)",
+              "bottleneck": "2 producteurs occidentaux: American Pacific (USA) et SNPE/Eurenco (capacité très limitée). Zéro production souveraine en France à l'échelle industrielle. Le PA est LE comburant de tous les propergols solides: sans PA, zéro missile, zéro roquette.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2013",
+                "2014"
+              ]
+            },
+            {
+              "id": "CAP-51",
+              "name": "Nitrocellulose / approvisionnement coton linters",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Culture et traitement de coton linters (fibres courtes), nitration pour produire la nitrocellulose base de toutes les poudres propulsives. Alternative: cellulose de bois (procédé plus complexe).",
+              "civil_examples": "Peintures et vernis (nitrocellulose industrielle), encres d'imprimerie, cinéma (pellicule historique), cosmétiques (vernis à ongles)",
+              "bottleneck": "Dépendance Chine >70% pour le coton linters. Si la Chine coupe l'export, la production de poudre propulsive s'arrête sous 6 mois. Eurenco (Bergerac) transforme mais ne produit pas la matière première. Alternatives (cellulose bois): R&D en cours mais pas industrialisé.",
+              "programmes": [
+                "munitions"
+              ],
+              "nace_codes": [
+                "2060",
+                "2015"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sca_metaux_strategiques",
+          "name": "Métaux stratégiques",
+          "level": "categorie",
+          "context": "Tungstène (pénétrateurs), terres rares/aimants (moteurs), acier balistique (blindage), titane (structures allégées), cuivre OFHC/tantale (charges creuses): tous dépendent de fournisseurs extra-européens ou de monopoles intra-européens.",
+          "children": [
+            {
+              "id": "CAP-52",
+              "name": "Raffinage/transformation tungstène",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Transformation du concentré de tungstène (scheelite/wolframite) en poudre W et carbure de tungstène WC. Frittage de composites WC-Co pour outils de coupe et pénétrateurs cinétiques.",
+              "civil_examples": "Outillage de coupe (plaquettes carbure), forage pétrolier (trépans), électronique (filaments, contacts), soudure (électrodes TIG)",
+              "bottleneck": "Dépendance Chine >80% du tungstène mondial. Eurotungstène (France) fermé. Sandvik/Kennametal (Suède/USA) transforment mais matière première chinoise. Pénétrateurs cinétiques APFSDS (obus flèche Leclerc): tungstène ou uranium appauvri (interdit en France). Alternative DU: politiquement sensible.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2445",
+                "2446"
+              ]
+            },
+            {
+              "id": "CAP-53",
+              "name": "Fabrication aimants permanents NdFeB/SmCo",
+              "level": "capacite",
+              "criticality": "critique",
+              "description": "Séparation et raffinage d'oxydes de terres rares, fabrication d'aimants permanents néodyme-fer-bore (NdFeB) et samarium-cobalt (SmCo) par frittage ou bonding.",
+              "civil_examples": "Automobile (moteurs EV), éolien (génératrices), électronique (haut-parleurs, disques durs), médical (IRM), industrie (moteurs)",
+              "bottleneck": "Dépendance Chine >90% pour terres rares raffinées et aimants NdFeB. Zéro capacité de fabrication d'aimants en France. Sans aimant: pas de moteur drone (CAP-07), pas de servomoteur tourelle (CAP-31), pas d'actuateur missile. Projets EU (EIT RawMaterials) mais pas avant 2028-2030.",
+              "programmes": [
+                "drones",
+                "vehicules_blindes",
+                "missiles",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "2592",
+                "2599"
+              ]
+            },
+            {
+              "id": "CAP-54",
+              "name": "Production aciers spéciaux balistiques",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Production d'aciers à très haute dureté (>450 HB) type ARMOX/RAMOR par fusion électrique, laminage et traitement thermique spécifique. Aciers au nickel-chrome-molybdène pour blindage.",
+              "civil_examples": "Mines (tôles anti-usure), construction (engins TP), recyclage (broyeurs), cimenterie (revêtements anti-abrasion)",
+              "bottleneck": "SSAB (Suède) quasi-monopole mondial sur ARMOX/RAMOR. ArcelorMittal ne produit pas d'acier blindage. Aucun producteur français qualifié. Stock national quasi nul. Délai commande: 6-12 mois. Dépendance intra-européenne sur un seul fournisseur.",
+              "programmes": [
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2410",
+                "2420"
+              ]
+            },
+            {
+              "id": "CAP-55",
+              "name": "Transformation titane (forge/laminage)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Procédé Kroll (réduction TiCl4), refusion VAR/EBM, forge et laminage de barres et tôles titane Ti-6Al-4V. Usinage titane.",
+              "civil_examples": "Aéronautique (pièces structure, trains d'atterrissage), médical (prothèses), chimie (échangeurs), sport (cadres vélo), horlogerie",
+              "bottleneck": "UKAD (Aubert & Duval + VSMPO-AVISMA russe): partenariat interrompu depuis 2022. Dépendance Russie/Chine pour le titane éponge. Aubert & Duval (Pamiers) forge mais matière importée. Délai approvisionnement: 12+ mois.",
+              "programmes": [
+                "missiles",
+                "drones",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2410",
+                "2420",
+                "2550"
+              ]
+            },
+            {
+              "id": "CAP-56",
+              "name": "Cuivre OFHC et tantale haute pureté",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Affinage électrolytique du cuivre à >99.99% (OFHC: Oxygen-Free High Conductivity). Transformation du tantale par procédé hydrure. Barres, disques et ébauches pour charges creuses.",
+              "civil_examples": "Électronique (connectique HiFi, guides d'ondes), supraconducteurs, chimie (réacteurs tantale), condensateurs (tantale), semi-conducteurs (cibles de pulvérisation)",
+              "bottleneck": "Tantale: dépendance Afrique (RDC, Rwanda) >60%, conflit des minerais. Cuivre OFHC: peu de raffineurs en Europe (Aurubis, Montanwerke Brixlegg). Sans liner cuivre/tantale: pas de charge creuse = pas de missile antichar.",
+              "programmes": [
+                "missiles",
+                "munitions"
+              ],
+              "nace_codes": [
+                "2444",
+                "2445"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sca_materiaux_avances",
+          "name": "Matériaux avancés",
+          "level": "categorie",
+          "context": "Fibre de carbone et poudres métalliques: deux matériaux transversaux utilisés dans tous les programmes, dont la production est concentrée hors d'Europe.",
+          "children": [
+            {
+              "id": "CAP-57",
+              "name": "Production poudres métalliques",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Atomisation gazeuse ou plasma de poudres métalliques haute pureté (Ti-6Al-4V, Inconel 718, acier inox 316L, aluminium) pour fabrication additive et métallurgie des poudres.",
+              "civil_examples": "Aéronautique (impression 3D pièces moteur), médical (implants sur mesure), automobile (pièces frittées), outillage (inserts moule)",
+              "bottleneck": "Aubert & Duval (Pamiers) et Erasteel (Commentry) produisent en partie. Carpenter Additive (USA), Höganäs (Suède) concurrents. Capacité française existante mais limitée. Sans poudre métallique, CAP-45 (fabrication additive) est inutile.",
+              "programmes": [
+                "drones",
+                "missiles",
+                "vehicules_blindes",
+                "guerre_electronique"
+              ],
+              "nace_codes": [
+                "2410",
+                "2599"
+              ]
+            },
+            {
+              "id": "CAP-58",
+              "name": "Fibre de carbone souveraine",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Fabrication de précurseur PAN (polyacrylonitrile) et carbonisation pour produire de la fibre de carbone T300 à T800. Ensimage et bobinage.",
+              "civil_examples": "Aéronautique (fuselage A350/787), éolien (pales), automobile (pièces structure), sport (vélos, raquettes), construction (renfort sismique)",
+              "bottleneck": "Dépendance Japon >60% (Toray, Teijin, Mitsubishi Chemical). Zéro production de fibre de carbone en France. Hexcel (Dagneux) tisse et préimprègne mais importe la fibre. SGL Carbon (DE) et Dowaksa (Turquie) seuls producteurs EU. La fibre de carbone entre dans des dizaines de systèmes d'armes (drones, missiles, véhicules).",
+              "programmes": [
+                "drones",
+                "missiles",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2016",
+                "2060"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sca_consommables",
+          "name": "Consommables industriels critiques",
+          "level": "categorie",
+          "context": "Gaz spéciaux et fluides industriels: invisibles mais indispensables à toute production. Soudure, usinage, tests d'étanchéité, cryogénie dépendent de consommables dont l'approvisionnement est fragile.",
+          "children": [
+            {
+              "id": "CAP-59",
+              "name": "Gaz spéciaux industriels",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Production et purification de gaz spéciaux: argon haute pureté (soudure TIG), hélium (tests étanchéité, cryogénie IR), SF6 (isolants HT), azote liquide (cryogénie détecteurs).",
+              "civil_examples": "Soudure industrielle, semi-conducteurs (atmosphères contrôlées), médical (IRM hélium), agroalimentaire (conditionnement), recherche",
+              "bottleneck": "Air Liquide (FR) = atout souverain majeur. Hélium: 100% importé (USA, Qatar, Algérie), marché mondial tendu. La soudure TIG (CAP-28) consomme massivement de l'argon. Les détecteurs IR refroidis (CAP-10, CAP-32) nécessitent hélium/azote liquide. Capacité de surge limitée sur hélium.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes",
+                "missiles"
+              ],
+              "nace_codes": [
+                "2011",
+                "2014"
+              ]
+            },
+            {
+              "id": "CAP-60",
+              "name": "Lubrifiants et fluides de coupe militaires",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Huiles de coupe spécialisées pour usinage aciers durs, graisses opérationnelles grand froid/grand chaud (-40/+70°C), fluides hydrauliques MIL-PRF-5606/83282.",
+              "civil_examples": "Automobile (lubrifiants moteur), usinage industriel (fluides de coupe), aéronautique (graisses), hydraulique industrielle",
+              "bottleneck": "TotalEnergies, Fuchs, Motul: capacité française existante. Qualification MIL-spec: 6-12 mois. L'usinage de 150 000 obus/an (CAP-03) consomme des quantités énormes de fluides de coupe. Additifs spéciaux parfois importés. Pas de goulet critique si anticipé.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2059",
+                "2042"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support_industriel",
+      "name": "Support industriel transversal",
+      "level": "programme",
+      "criticality": "haute",
+      "context": "La montée en puissance de production ne dépend pas que des capacités de fabrication. Les fonctions de test, qualification, contrôle qualité, emballage, logistique et maintenance sont des multiplicateurs de goulets: si la production est ×10, les tests doivent être ×10 aussi. Ces capacités transversales sont souvent sous-dimensionnées et ignorées dans les plans de montée en cadence.",
+      "children": [
+        {
+          "id": "si_qualification",
+          "name": "Qualification et essais",
+          "level": "categorie",
+          "context": "Toute munition, tout blindage, tout équipement électronique doit être qualifié par des essais normés (balistiques, CEM, environnementaux). La capacité de test en France est dimensionnée pour la production de temps de paix. Une multiplication par 10 de la production crée un backlog de tests qui bloque les livraisons.",
+          "children": [
+            {
+              "id": "CAP-61",
+              "name": "Bancs d'essai et qualification balistique",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Stands de tir balistique V50, chambres de test fragments (STANAG 4569), bancs d'épreuve de munitions (mesure pressions, vitesses initiales). Mannequins balistiques.",
+              "civil_examples": "Sécurité automobile (crash tests), sport (casques), bâtiment (résistance au choc), verre feuilleté (tests impact)",
+              "bottleneck": "DGA Techniques Terrestres (Bourges) et quelques sous-traitants privés. Capacité de test = goulet si production ×10. Test backlog peut bloquer les livraisons pendant des mois. Chaque nouveau lot de munitions doit être éprouvé.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes",
+                "equipement_soldat"
+              ],
+              "nace_codes": [
+                "7120",
+                "3312",
+                "7219"
+              ]
+            },
+            {
+              "id": "CAP-62",
+              "name": "Tests CEM (compatibilité électromagnétique)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Chambres anéchoïques, générateurs de champs, mesure d'émissions et d'immunité selon MIL-STD-461. Tests de susceptibilité foudre et IEMN (impulsion électromagnétique nucléaire).",
+              "civil_examples": "Télécoms (homologation CE), automobile (EMC véhicule), médical (dispositifs), aéronautique civile (DO-160)",
+              "bottleneck": "Très peu de chambres anéchoïques MIL en France: DGA, Thales Elancourt, Nexio (ex-CEAT). Délai de test: 3-6 mois actuellement. Chaque drone, radio, brouilleur = CEM obligatoire. Production ×10 impossible sans capacité de test ×10.",
+              "programmes": [
+                "drones",
+                "equipement_soldat",
+                "guerre_electronique",
+                "missiles"
+              ],
+              "nace_codes": [
+                "7120",
+                "2651",
+                "7219"
+              ]
+            },
+            {
+              "id": "CAP-63",
+              "name": "Tests environnementaux (vibrations, chocs, climatique)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Pots vibrants (Brüel & Kjær), tables de choc, chambres climatiques (-60/+85°C, humidité, brouillard salin). Qualification MIL-STD-810 et STANAG 4370.",
+              "civil_examples": "Aéronautique (DO-160), automobile (endurance), électronique grand public (fiabilité), spatial (vibrations lanceur)",
+              "bottleneck": "Capacité limitée en France: DGA, SOPEMEA, Thales, MBDA en interne. Chaque équipement déployé en opération doit être qualifié environnement. Pot vibrant >50 kN: rares et chers. Délai de test: 2-4 mois.",
+              "programmes": [
+                "drones",
+                "missiles",
+                "equipement_soldat",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "7120",
+                "3312",
+                "7219"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "si_controle_qualite",
+          "name": "Contrôle qualité et métrologie",
+          "level": "categorie",
+          "context": "Chaque obus forgé doit être contrôlé individuellement (CND). Chaque soudure de coque blindée doit être radiographiée. La capacité de contrôle qualité est proportionnelle à la production et constitue un goulet souvent sous-estimé.",
+          "children": [
+            {
+              "id": "CAP-64",
+              "name": "Métrologie et CND (contrôle non destructif)",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Machines à mesurer tridimensionnelles (MMT), tomographie X industrielle, ressuage, magnétoscopie, ultrasons phased array, courants de Foucault. Contrôle 100% des pièces critiques.",
+              "civil_examples": "Aéronautique (inspection pièces moteur), nucléaire (soudures cuve), pétrole (pipelines), ferroviaire (essieux), fonderie (pièces coulées)",
+              "bottleneck": "Opérateurs CND certifiés COFREND: pénurie en France. Tomographes X industriels: machines importées (Zeiss, GE). Chaque corps d'obus 155mm (CAP-01) doit être contrôlé individuellement par ultrasons. 150 000 obus/an = 150 000 contrôles CND.",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes",
+                "missiles"
+              ],
+              "nace_codes": [
+                "7120",
+                "3312",
+                "7219"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "si_logistique_industrielle",
+          "name": "Logistique industrielle défense",
+          "level": "categorie",
+          "context": "L'emballage, le transport de matières dangereuses et l'outillage de production sont des fonctions support souvent oubliées dans les plans de montée en cadence. Sans caisse de transport, les munitions ne quittent pas l'usine. Sans matrice de forge, la production s'arrête.",
+          "children": [
+            {
+              "id": "CAP-65",
+              "name": "Emballage et conditionnement munitions",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de caisses métalliques (type M2A1, PA108), palettisation, lots de combat, marquage/traçabilité. Conditionnement hermétique longue conservation. Conformité ADR.",
+              "civil_examples": "Emballage industriel (caisses métalliques), logistique (palettisation), agroalimentaire (conditionnement hermétique), pharmaceutique (traçabilité)",
+              "bottleneck": "150 000 obus 155mm = 150 000 conteneurs individuels + caisses de lots. Munitions petit calibre: millions de cartouches à emballer en bandes/chargeurs. Quelques PME spécialisées (NCS Industries, Music). Capacité sous-estimée.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "1623",
+                "2229"
+              ]
+            },
+            {
+              "id": "CAP-66",
+              "name": "Logistique ATEX et transport matières dangereuses",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Véhicules de transport TMD, conteneurs ATEX certifiés, zones de stockage intermédiaire explosifs, infrastructure magazins. Conformité réglementation Seveso et ADR.",
+              "civil_examples": "Chimie (transport produits dangereux), pétrole (logistique hydrocarbures), mines (explosifs civils), feux d'artifice",
+              "bottleneck": "Transport entre sites de production (Eurenco Bergerac → Nexter Bourges): nombre limité de transporteurs agréés TMD. Zones de stockage réglementées Seveso. Un doublement de production = doublement des flux TMD mais infrastructure fixe.",
+              "programmes": [
+                "munitions",
+                "missiles"
+              ],
+              "nace_codes": [
+                "5229",
+                "5210",
+                "2822"
+              ]
+            },
+            {
+              "id": "CAP-67",
+              "name": "Outillage et moules de production",
+              "level": "capacite",
+              "criticality": "moyenne",
+              "description": "Fabrication de matrices de forge, moules d'injection, gabarits de soudure, montages d'usinage, outillage de presse. Acier outil traité (H13, D2).",
+              "civil_examples": "Automobile (matrices emboutissage), aéronautique (outillage composite), plasturgie (moules injection), fonderie (modèles)",
+              "bottleneck": "Matrice de forge corps d'obus: durée de vie ~5000 pièces. Production ×10 = outillage ×10. Délai fabrication matrice: 8-16 semaines. Moulistes français: filière en déclin. Machines EDM/électroérosion: importées (Sodick, Makino).",
+              "programmes": [
+                "munitions",
+                "vehicules_blindes"
+              ],
+              "nace_codes": [
+                "2562",
+                "2573",
+                "2849"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "si_soutien_operationnel",
+          "name": "Soutien et régénération",
+          "level": "categorie",
+          "context": "En haute intensité, 10-20% de la flotte blindée est endommagée en quelques semaines. La capacité de réparation en théâtre d'opérations est le facteur n°1 de disponibilité opérationnelle (leçon Ukraine). La BITD doit pouvoir projeter des équipes et de l'outillage.",
+          "children": [
+            {
+              "id": "CAP-68",
+              "name": "Maintenance et régénération en théâtre",
+              "level": "capacite",
+              "criticality": "haute",
+              "description": "Ateliers de campagne mobiles (shelters équipés), pièces de rechange critiques, documentation technique, outillage déployable. Soudure de campagne, usinage de dépannage, électronique de réparation.",
+              "civil_examples": "BTP (ateliers mobiles de chantier), mines (maintenance sur site), offshore (réparation en mer), événementiel (infrastructure temporaire)",
+              "bottleneck": "En HI, 10-20% de la flotte blindée endommagée en quelques semaines. Réparation en théâtre = facteur de disponibilité n°1 (leçon Ukraine). KNDS, Arquus ont des équipes de soutien mais capacité très limitée. Techniciens projetables: ressource rare.",
+              "programmes": [
+                "vehicules_blindes",
+                "equipement_soldat",
+                "drones"
+              ],
+              "nace_codes": [
+                "3312",
+                "3320",
+                "3315"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
