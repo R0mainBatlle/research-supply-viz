@@ -42,5 +42,6 @@ next-env.d.ts
 
 # Large data files (served by API or generated)
 public/data/companies_eu.json
+public/data/companies_unified.json
 public/data/companies_full.json
 public/data/companies.json
